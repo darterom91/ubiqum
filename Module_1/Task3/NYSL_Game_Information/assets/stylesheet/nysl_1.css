@@ -4,17 +4,19 @@
 }
 
 body{
-  width: 100%;
-  height: 100%;
+
   font-family: sans-serif;
   font-size: 16px;
+  background-image: url("..//img/cesped2.Jpg");
+  background-attachment: initial;
+
 }
 
 header{
   height: 325px;
   margin: 0 auto;
   border-bottom: 1px solid black;
-  background-image: url("../img/design1_image1.jpeg");
+  background-image: url("../img/cesped.Jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-attachment: initial;
@@ -28,13 +30,15 @@ header{
 }
 
 .content-menu h1{
-  font-size:  2.5em;
+  font-size:  4em;
   font-family: Verdana, sans-serif;
   font-style: italic;
   color:orange;
   text-shadow: 5px 1px 0px black;
   position: relative;
-  width: 1125px;
+  top: 125px;
+  left: 20px;
+  width: 1200px;
 }
 
 .nav_content{
@@ -43,23 +47,28 @@ header{
   width: 100%;
   -webkit-flex: 1;
   display: flex;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  position: sticky;
+  top: 1px;
 }
 
 .title_page{
   position: relative;
-  padding: 15px;
+  padding: 15px 140px;
   font-size: 2.5em;
   font-style: italic;
   color: white;
-  text-align: center;
+  text-align: end;
   flex: 2;
 }
 
 .imglogo{
   border-radius: 110px;
   position: relative;
-  right: 250px;
+  right: 0px;
   bottom: 35px;
+  flex: 1;
 }
 
 .logo {
@@ -69,39 +78,75 @@ a .logo {
   width: 150px;
 }
 
+.goTop{
+  display: none;
+  text-align: center;
+  padding: 20px;
+  font-size: 3em;
+  color: white;
+  background-image: url("../img/cesped.Jpg");
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.contentWithNav{
+  display: flex;
+}
+
 nav{
   width: 20%;
-  float: left;
+  flex: 2;
 }
 
 .menu {
   margin: 0;
+  position: sticky;
+  top: 83px;
+  background-color: white;
 }
 
 .menu li{
   list-style: none;
   padding: 30px;
   border-bottom: 1px solid black;
-  border-right: 1px solid black; 
+  border-right: 1px solid black;
+  transition: border-bottom 3s, background-color 3s;
+}
+
+.menu li:hover{
+  border-bottom: 1px solid white;
+  background-color: grey;
+  color: white;
 }
 
 .menu li u{
   color: darkgoldenrod;
 }
 
+.menu li u:hover{
+  color: white;
+}
+
 .menu a{
   text-decoration: none;
-  color: blue;
+  color: black;
+  transition: color 1s;
+}
+
+.menu a:hover{
+  color: white;
 }
 
 section{
-  margin-left: 20%;
+  background-color: white;
+  margin-left: 5%;
   width: 74%;
+  flex: 6;
 }
 
 .content{
-  width: 100%;
-  height: 100%;
   padding-left: 5%;
   padding-top: 2%;
   padding-bottom: 2%;
@@ -145,7 +190,6 @@ dd{
 
 .table-content{
   width: 100%;
-  border-left: 1px solid black;
   margin-top: 15px;
   margin-left: 10px;
   margin-bottom: 30px;
@@ -154,6 +198,8 @@ dd{
 .table-content th{
   text-align: center;
   border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
   background-color: black;
   color: rgb(192, 157, 67);
   padding: 10px;
@@ -162,6 +208,7 @@ dd{
 .table-content td{
   border-bottom: 1px solid black;
   border-right: 1px solid black;
+  border-left: 1px solid black;
   padding: 10px;
 }
 
@@ -205,6 +252,12 @@ dd{
   margin: 40px;
 }
 
+.contentRulePolice h2{
+  border-bottom: 1px solid black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .contentRulePolice h3{
   margin-top: 40px;
 }
@@ -214,15 +267,17 @@ dd{
   margin-left: 20PX;
 }
 
+.initList{
+  font-weight: bold;
+}
+
 .contentRulePolice ol{
   margin-top: 20px;
   margin-left: 20PX;
-  font-weight: normal;
 }
 
-.contentRulePolice ol > *{
-  margin-top: 20px;
-  margin-left: 20PX;
+.contentRulePolice p{
+  display: inline;
   font-weight: normal;
 }
 
@@ -231,6 +286,7 @@ dd{
   margin-left: 20PX;
 }
 
-.orderletter{
+.orderletter li{
   list-style-type: lower-alpha;
+  font-weight: normal;
 }
