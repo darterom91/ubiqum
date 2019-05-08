@@ -82,7 +82,7 @@ a .logo {
   display: none;
   text-align: center;
   padding: 20px;
-  font-size: 3em;
+  font-size: 2em;
   color: white;
   background-image: url("../img/cesped.Jpg");
   position: fixed;
@@ -141,8 +141,7 @@ nav{
 
 section{
   background-color: white;
-  margin-left: 5%;
-  width: 74%;
+  margin-left: 2%;
   flex: 6;
 }
 
@@ -289,4 +288,153 @@ dd{
 .orderletter li{
   list-style-type: lower-alpha;
   font-weight: normal;
+}
+
+.contentInfo {
+  margin: 40px;
+}
+
+.contentInfo button{
+	background-color:#44c767;
+	border:1px solid black;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 12px;
+  text-decoration:none;
+  margin-left: 25%;
+  margin-bottom: 10px;
+}
+
+.personalInfo {
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.personalInfo div{
+  padding: 2% 4%;
+}
+
+.personalInfo input{
+  margin-left: 0px;
+  width: 100px;
+}
+
+.personalInfo p{
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.graded {
+}
+
+.graded input{
+ margin: 0px;
+}
+
+.contact{
+  padding: 10px;
+}
+
+.contact input{
+  margin-left: 20px;
+}
+
+.school {
+  border: 1px solid black;
+  display: flex;
+}
+.school h4{
+  display: ruby;
+}
+
+.school1 {
+  flex: 1;
+}
+
+.school1 h5{
+  margin-bottom: 10px;
+  text-decoration-line: underline;
+}
+
+.school1 select {
+  padding: 10px;
+}
+
+.school2 {
+  flex: 1;
+}
+
+.school2 h5{
+  text-decoration-line: underline;
+  margin-bottom: 10px;
+}
+
+.school2 select{
+  padding: 10px;
+}
+
+.position{
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.position p{
+  margin-bottom: 10px;
+}
+
+.uniform{
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.uniform h5{
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.uniform input{
+  margin: 10px;
+}
+
+.permission{
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.permission h4{
+  margin-bottom: 10px;
+}
+.permission div{
+  margin-bottom: 30px;
+}
+.permission p{
+  margin-right: 30px;
+}
+
+.contentShow{
+  border: 2px double rgb(192, 157, 67);
+  border-radius: 10%;
+  padding: 5%;
+}
+
+.tableInformation {
+  width: 85%;
+  margin: 10%;
+}
+
+.tableInformation th{
+  background-color: black;
+  color: rgb(192, 157, 67);
+  padding: 10px;
+}
+
+.tableInformation td{
+  padding: 10px;
 }
