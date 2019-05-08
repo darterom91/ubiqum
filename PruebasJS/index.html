@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>pruebas con javaScript</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+
+
+    <script>
+      document.getElementById("demo").innerHTML= 'hola JavaScript';
+    </script>
+    <p>Clica al boton para cambiar la frase</p>
+    <p id="demo2"></p>
+
+
+    <button type="button" onclick="document.getElementById('demo2').innerHTML = 'hola JavaScript'">Click</button>
+
+    <button type="button" onclick="document.getElementById('demo2').innerHTML = 'adios JavaScript'">Click</button>
+
+    <button type="button" onclick="document.getElementById('demo2').style.fontSize='35px'">35px</button>
+
+    <button type="button" onclick="document.getElementById('demo2').style.display='none'">none</button>
+
+    <button type="button" onclick="document.getElementById('demo2').style.display='inline'">inline</button>
+
+    <button type="button" onclick="document.getElementById('demo2').style.display='block'">inline</button>
+
+    <button type="button" onclick="document.getElementById('demo2').style.display='block'">inline</button>
+
+
+    <div id="demo3">pollo</div>
+
+    <button type="button" onclick="document.getElementById('demo3').style.backgroundColor = 'red';">backgroundColor: Red</button>
+    <button type="button" onclick="document.getElementById('demo3').style.backgroundColor =
+    'blue'">backgroundColor: blue</button>
+    <button type="button" onclick="document.getElementById('demo3').style.backgroundColor = 'green'">backgroundColor: green</button>
+    <button type="button" onclick="document.getElementById('demo3').style.backgroundColor='yellow'">backgroundColor: yellow</button>
+    <button type="button" onclick="document.getElementById('demo3').style.backgroundColor='white'">backgroundColor: white</button>
+    <button type="button" onclick="document.getElementById('demo3').style.backgroundColor='black'">backgroundColor:
+      black</button>
+
+    <br>
+    <br>
+
+    <button type="button" onclick="document.getElementById('demo3').style.color = 'black'">color:
+      black</button>
+    <button type="button" onclick="document.getElementById('demo3').style.color = 'blue'">color: blue</button>
+    <button type="button" onclick="document.getElementById('demo3').style.color = 'green'">color: green</button>
+    
+    <br>
+    <button type="button" onclick="document.getElementById('demo3').style.border = '6px solid black'">border</button>
+
+    <script>
+      document.getElementById('demo3').style.color="red";
+      document.getElementById('demo3').style.backgroundColor = "black";
+      document.getElementById('demo3').style.textAlign="center";
+      document.getElementById('demo3').style.padding="100px";
+      document.getElementById('demo3').style.marginLeft="20%";
+      document.getElementById('demo3').style.marginRight= "20%";
+    </script>
+
+
+    <p id="demo4">sí le das al botón, pasan cosicas !!!</p>
+
+    <button type="button" onclick="myFunction()">Dale al botoooon!!!!!</button>
+    <button type="button" onclick="myFunction2()">Dale al botoooon!!!!!</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("demo4").innerHTML="Monos caminando, hacia el horizonte!";
+        document.getElementById("demo4").style.backgroundColor = "red";
+        document.getElementById("demo4").style.color = "white";
+        document.getElementById("demo4").style.fontSize="3em";
+      }
+
+      function myFunction2() {
+          document.getElementById("demo4").innerHTML = "ohhh... ha cambiado el paragrafo!";
+          document.getElementById('demo4').style.backgroundColor = "black";
+          document.getElementById("demo4").style.color = "red";
+          document.getElementById("demo4").style.fontSize = "1em";
+
+        }
+    </script>
+
+  </body>
+</html>
