@@ -340,6 +340,7 @@ dd{
 
 .personalInfo input{
   margin-left: 50px;
+  width: 70%;
 }
 
 .infoPerson{
@@ -350,18 +351,20 @@ dd{
 }
 
 .infoPerson div{
+  display: flex;
   padding: 1% 2%;
   border: 1px solid black;
   flex: 1;
 }
 
 .infoPerson input{
+  flex: 1;
   margin-left: 50px;
   width: 100px;
 }
 
-.graded {
-  
+.gender {
+  display: flex;
 }
 
 .graded p{

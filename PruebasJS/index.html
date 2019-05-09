@@ -2,15 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <script src="assets/js/pruebas.js"></script>
     <title>pruebas con javaScript</title>
   </head>
   <body>
-    <p id="demo"></p>
+   
+   <!-- Hola mundo con JavaScript -->
 
+    <p id="demo"></p>
 
     <script>
       document.getElementById("demo").innerHTML= 'hola JavaScript';
     </script>
+    
+    <!-- Cada boton hace una funcion y segun el boton cambia el texto, el tamaño y display -->
+
     <p>Clica al boton para cambiar la frase</p>
     <p id="demo2"></p>
 
@@ -32,6 +38,8 @@
 
     <div id="demo3">pollo</div>
 
+    <!-- Modificar el fondo de div -->
+
     <button type="button" onclick="document.getElementById('demo3').style.backgroundColor = 'red';">backgroundColor: Red</button>
     <button type="button" onclick="document.getElementById('demo3').style.backgroundColor =
     'blue'">backgroundColor: blue</button>
@@ -44,12 +52,15 @@
     <br>
     <br>
 
+    <!-- modificar el color del texto -->
+
     <button type="button" onclick="document.getElementById('demo3').style.color = 'black'">color:
       black</button>
     <button type="button" onclick="document.getElementById('demo3').style.color = 'blue'">color: blue</button>
     <button type="button" onclick="document.getElementById('demo3').style.color = 'green'">color: green</button>
-    
+
     <br>
+
     <button type="button" onclick="document.getElementById('demo3').style.border = '6px solid black'">border</button>
 
     <script>
@@ -61,6 +72,7 @@
       document.getElementById('demo3').style.marginRight= "20%";
     </script>
 
+<!-- modificar texto y fondo, al pulsar 2 botones -->
 
     <p id="demo4">sí le das al botón, pasan cosicas !!!</p>
 
@@ -72,16 +84,115 @@
         document.getElementById("demo4").innerHTML="Monos caminando, hacia el horizonte!";
         document.getElementById("demo4").style.backgroundColor = "red";
         document.getElementById("demo4").style.color = "white";
-        document.getElementById("demo4").style.fontSize="3em";
+        document.getElementById("demo4").style.padding = "20px";
+        document.getElementById("demo4").style.margin = "20px";
+        document.getElementById("demo4").style.fontSize = "3em";
+        document.getElementById("demo4").style.textAlign = "center";
       }
 
       function myFunction2() {
           document.getElementById("demo4").innerHTML = "ohhh... ha cambiado el paragrafo!";
           document.getElementById('demo4').style.backgroundColor = "black";
           document.getElementById("demo4").style.color = "red";
+          document.getElementById("demo4").style.padding = "20%";
+          document.getElementById("demo4").style.margin = "100px";
           document.getElementById("demo4").style.fontSize = "1em";
-
+          document.getElementById("demo4").style.textAlign = "end";
         }
+    </script>
+
+<!-- cambiar texto al presionar el boton y linkar el js desde un directorio y exterior al html-->
+    <p><strong>Esto es la Demo 5:</strong></p>
+    <p id="demo5"></p>
+    <button type="button" onclick="myFunction3()">Click me!!</button>
+
+    <p>El resultado de 5 + 5: </p>
+    <p id="writeHtml"></p>
+
+    <script>
+      document.getElementById("writeHtml").innerHTML = 5 + 5;
+    </script>
+
+    <p>write</p>
+    <script>
+      document.write(5 + 2);
+    </script>
+
+    <p>alert</p>
+    <script>
+      window.alert(5 + 2);
+    </script>
+
+    <!-- Usar variables -->
+    <p>Vamos a sumar los numeros: </p>
+    <p>10 + 20 =</p>
+    <p id="varSum"></p>
+
+    <button type="button" onclick="sumarVar()">Suma</button>
+
+    <Script>
+      function sumarVar() {
+        var num = 10;
+        var num2 = 20;
+        var res = num + num2;
+
+        document.getElementById("varSum").innerHTML = res;
+      }
+    </Script>
+
+    <!-- cambiar color de fondo al mover el mouse -->
+    
+    <div id="fondo" onmouseover="changeBackground(event)" onmouseout="clearCoor()">c
+      <p id="paraf" onmouseover="changeFontColor(event)" onmouseout="clearCoor()">Cambiando color fondo y fuente</p>
+    </div>
+
+    <script>
+      function changeBackground(e) {
+        document.getElementById("fondo").style.backgroundColor = "yellowgreen";
+      }
+
+      function changeFontColor(e) {
+          document.getElementById("paraf").style.color = "blue";
+        }
+
+        function clearCoor() {
+          document.getElementById("fondo").style.backgroundColor = "white";
+          document.getElementById("paraf").style.color = "black";
+        }
+    </script>
+    
+    <!-- localizar la posicion de una letra -->
+    <p>txt = "abcdefghijklm"</p>
+    <p id="cosa"></p>
+
+    <script>
+        var str = "abcdefghijklm";
+        var pos = str.indexOf("h");
+
+        document.getElementById("cosa").innerHTML = pos ;
+    </script>
+
+    <form id="formTest" action="/PruebasJS/index.html">
+      First name: <input type="text" name="fName" value="David">
+      Last name: <input type="text" name="lName" value="Artero">
+      <input type="submit" value="submit">
+    </form>
+
+    <button onclick="formFunction()">Click me!!!</button>
+
+    <p id="showInfo"></p>
+
+    <script>
+      function formFunction() {
+        var x = document.forms["formTest"];
+        var txt = "";
+        var i;
+
+        for (i = 0; i < x.length; i++) {
+          txt += x.elements[i].value + "<br>";
+        }
+        document.getElementById("showInfo").innerHTML = txt;
+      }
     </script>
 
   </body>
