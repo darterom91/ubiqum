@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/stylesheet/nysl_1.css">
+    <!-- <link rel="stylesheet" href="assets/stylesheet/nysl_2.css"> -->
+    <!-- <link rel="stylesheet" href="assets/stylesheet/nysl_3.css"> -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="assets/js/goTop.js"></script>
+
+    <title>registration</title>
+  </head>
+  <body>
+    <header>
+      <div class="content-menu">
+        <h1 class="title_init">Northside Youth Soccer League</h1>
+      </div>
+    </header>
+    
+    <div class="nav_content">
+      <div class="title_page">Registration</div>
+      <div class="imglogo">
+        <a href="home3_1.html"><img class="logo" src=" assets/img/nysl_logo.png"
+            alt="Logo Northside Youth Soccer League Website"></a>
+      </div>
+    </div>
+    
+    <span class="goTop">^</span>
+    
+    <div class="contentWithNav">
+      <nav>
+        <ul class="menu">
+          <li><a href="home3_1.html">Home</a></li>
+          <li><a href="about_NYSL3_1.html" alt="About NYSL page">About NYSL</a></li>
+          <li><a href="contact3_1.html">Contact</a></li>
+          <li><a href="gameInfo3_1.html" alt="Game Information">Game Information</a></li>
+          <li><a href="rulesPolicies3_1.html" alt="Rules & Policies page">Rules & Policies</a></li>
+          <li><u>Registration</u></li>
+          </ul>
+        </ul>
+      </nav>
+
+      <section>
+        <div class="content">
+          <form action="gameInformation.html">
+            <p>First name: </p>
+            <input type="text" name="firstname">
+            <p>Last name: </p>
+            <input type="text" name="lastname">
+            <p>Street Address: </p>
+            <input type="text" name="streetAddress">
+            <p>Zip code: </p>
+            <input type="number" name="zipName" min="5" max="7">
+            <p>Birth Date (mm/dd/yyyy): </p>
+            <input type="date" name="birthDate" min="2008-01-01">
+            <p>Gender: </p>
+            <input type="radio" name="gender" value="male" checked> Male
+            <input type="radio" name="gender" value="female"> Female
+            <p>Parent/Guardian: </p>
+            <input type="text" name="parent">
+            <p>Contact Phone: </p>
+            <input type="tel" name="phone" min="9">
+            <p>Contact Email: </p>
+            <input type="email" name="email">
+            
+            <h4>Which elementary schools do you live near?</h4>
+            <h5>First Closest School:</h5>
+            <input type="checkbox" name="school1"> AJ Katzenmaier
+            <input type="checkbox" name="school2"> Marjorie P Hart
+            <input type="checkbox" name="school3"> Greenbay
+            <input type="checkbox" name="school4"> North Elementary
+            <input type="checkbox" name="school5"> Howard A Yeager
+            <input type="checkbox" name="school6"> South Elementary
+
+            <h5>Second Closest School:</h5>
+            <input type="checkbox" name="school7"> AJ Katzenmaier
+            <input type="checkbox" name="school8"> Marjorie P Hart
+            <input type="checkbox" name="school9"> Greenbay
+            <input type="checkbox" name="school10"> North Elementary
+            <input type="checkbox" name="school11"> Howard A Yeager
+            <input type="checkbox" name="school12"> South Elementary
+          </form>
+        </div>
+      </section>
+  </body>
+</html>
