@@ -348,12 +348,14 @@ dd{
   border: 10px solid black;
   margin: 10px;
   display: flex;
+  flex-direction: row;
 }
 
 .infoPerson div{
   display: flex;
   padding: 1% 2%;
   border: 1px solid black;
+  flex-direction: row;
   flex: 1;
 }
 

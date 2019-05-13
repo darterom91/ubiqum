@@ -12,3 +12,10 @@ function myFunction3() {
 function outputHtml() {
   document.getElementById("writeHtml").innerHTML = 5+5;
 }
+
+function changeMoon() {
+  document.getElementById("test").innerHTML.text('Goodbye, Moon!').fadeOut(4000);
+}
+
+console.log('x= '+2+' | y='+3);
+console.log('x= ' + 2 + ' | y=' + 3);

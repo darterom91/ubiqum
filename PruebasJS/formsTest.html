@@ -2,17 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <script src="assets/js/forms.js"></script>
+    <link rel="stylesheet" href="assets/style/formStyle.css">
     <title>Forms Test</title>
   </head>
   <body>
-    <h1>Forms Test</h1>
-    
-    <form id="testForm" action="">
-      First name: <input type="text" name="fName">
-      Last name: <input type="text" name="lName">
-      tel: <input type="number" max="999999999">
-      date: <input type="date" name="time">
-      <input type="submit">
-    </form>
+    <div class="testForm">
+      <div class="personalInfo">
+        <div class="titleInfo">
+          <h1>Forms Test</h1>
+          <h2 id="errorMessage"></h2>
+          <p id="navegador" name="respuesta"></p>
+        </div>
+
+        <form name="myForm" action="assets/js/forms.js" onsubmit="return validateForm()" method="POST">
+        <div class="personalText">
+          <div>Name: <input type="text" name="fname"></div>
+          <div>Last Nam: <input type="text" name="fLast" onclick="viewName(this.value)"></div>
+        </div>
+
+        <div class="radioNav">
+          <div><input type="radio" name="browser" onclick="check(this.value)" value="Internet Explorer">Internet Explorer</div>
+          <div><input type="radio" name="browser" onclick="check(this.value)" value="Google Chrome">Google Chrome</div>
+          <div><input type="radio" name="browser" onclick="check(this.value)" value="Firefox">Firefox</div>
+          <div><input type="radio" name="browser" onclick="check(this.value)" value="Opera">Opera</div>
+        </div>
+
+        <input type="text" name="respuesta" size="20">
+
+        <button class="submit" type="submit">Submit</button>
+
+      </div>
+      </form>
+    </div>
   </body>
 </html>
