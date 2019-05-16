@@ -1,0 +1,105 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+}
+
+/* header{
+  background-color: red;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+nav{
+  background-color: green;
+}
+
+section{
+  background-color: yellow;
+  margin: 10px;
+}
+
+footer{
+  background-color: blue;
+  margin: 10px;
+} */
+
+/*Home*/
+/* .headerContent{
+  background-color: aqua;
+  height: 100px;
+  display: flex;
+}
+
+.homeTitle{
+  background-color: tomato;
+  text-align: left;
+  font-size: 2em;
+  flex: 1;
+}
+
+.emailConent{
+  background-color: seashell;
+  text-align: right;
+  flex: 1;
+} */
+
+/*Senate data*/
+#senate-data{
+  border: 1px solid black;
+}
+
+#senate-data th{
+  text-align: left;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+
+#senate-data td{
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#senate-data a{
+  text-decoration: none;
+  color: blue;
+}
+
+#senate-data a:hover{
+  color: black;
+  font-size: 18px;
+}
+
+/*House data*/
+#house-data{
+  border: 1px solid black;
+}
+
+#house-data th{
+  text-align: left;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+
+#house-data td{
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#house-data a{
+  text-decoration: none;
+  color: blue;
+}
+
+#house-data a:hover{
+  color: black;
+  font-size: 18px;
+}

@@ -51,7 +51,7 @@ for(i = 0;i < lst.length;i++){
   console.log("The name "+(i+1)+" is :"+lst[i]);
 }
 
-//Looping over an array 
+//Looping over an array
 
 //Exercise 2: Create an array with all the ages of the students in your class.  Iterate the array using a while loop, and then print every age in the console.  Add a conditional inside the while loop to only print even numbers.  Change the loop to use a "for" loop instead of a "while" loop.
 i=0;
@@ -137,9 +137,59 @@ function equalsAge(values) {
   }
 }
 
-//Exercise 7: Write a simple JavaScript function to join all elements of the following array into a string. 
+//Exercise 7: Write a simple JavaScript function to join all elements of the following array into a string.
 var myColors =["Red", "Green", "White", "Black"];
 indexValue(myColors);
 function indexValue(myColors) {
   console.log("\""+myColors[0]+"\", \""+myColors[1]+"\", \""+myColors[2]+"\", \""+myColors[3]+"\"");
 }
+
+//javaScript String Array
+
+// Exercise 1: Write a JavaScript function that reverses a number.For example, if x = 32443 then the output should be 34423.
+console.log(reverse_a_number(32243));
+function reverse_a_number(n) {
+  n = n + "";
+  return n.split("").reverse().join("");
+}
+
+// Exercise 2: Write a JavaScript function that returns a string in alphabetical order.For example, if x = 'webmaster' then the output should be 'abeemrstw'.Punctuation and numbers aren't passed in the string.
+function alphabet_order(str) {
+  return str.split('').sort().join('');
+}
+console.log(alphabet_order("webmaster"));
+
+//Exercise 3: Write a JavaScript function that converts the first letter of every word to uppercase. For example, if x = "prince of persia" then the output should be "Prince Of Persia".
+
+function uppercase(str) {
+  var array1 = str.split(' ');
+  var newarray1 = [];
+
+  for (var x = 0; x < array1.length; x++) {
+    newarray1.push(array1[x].charAt(0).toUpperCase() + array1[x].slice(1));
+  }
+  return newarray1.join(' ');
+}
+console.log(uppercase("prince of persia"));
+
+//Exercise 4: Write a JavaScript function that finds the longest word in a phrase.For example, if x = "Web Development Tutorial", then the output should be "Development".
+function find_longest_word(str) {
+  var array1 = str.match(/\w[a-z]{0,}/gi);
+  console.log(array1);
+
+  var result = array1[0];
+
+  console.log(result);
+  console.log(array1.length);
+
+  for (var x = 0; x < array1.length; x++) {
+    console.log(result+" = "+array1[x]);
+    
+    if (result.length < array1[x].length) {
+      console.log("[x] = "+x);
+      result = array1[x];
+    }
+  }
+  return result;
+}
+console.log(find_longest_word('Web Development Tutorial'));
