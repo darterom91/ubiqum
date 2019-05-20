@@ -4,47 +4,72 @@
   <meta charset="UTF-8">
   <script src="assets/js/senate.js"></script>
   <script src="assets/js/senate-table.js"></script>
-  <link rel="stylesheet" href="assets/style/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title>Senate data</title>
 </head>
 <body>
-  <nav>
-    <div>
-      <div>
-        <a href="#">TGIF</a>
-      </div>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li>
-          <a href="#">Congress 113</a>
-          <ul>
-            <li><a href="senate-data.html">Senate</a></li>
-            <li><a href="house-data.html">House</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
+  <div>
+    <a href="home.html">
+      <img class="img-fluid" src="assets/img/tgif-260nw-95440702.png" width="300" height="150"
+        class="d-inline-block align-top" alt="Logo TGIF">
+    </a>
+  </div>
   <header>
-    <div>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active"><a class="nav-link" href="home.html">Home<span
+                  class="sr-only">(current)</span></a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Congress 113</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li class="dropdown-item"><a href="senate-data.html">Senate</a></li>
+                <li class="dropdown-item"><a href="house-data.html">House</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </nav>
   </header>
   <!--Table container-->
-  <div>
-    <h2>Senators</h2>
-    <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S.
-      Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year
-      terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a
-      precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal
-      judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal
-      uniformed officers, as well as trial of federal officials impeached by the House.</p>
-
-  <div class="container-fluid">
-    <table id="senate-data" class="table table-hover"></table>
-  </div>
+  <section>
+    <div class="card d-flex flex-row">
+      <div class="card-body">
+        <h2 class="card-title">Senators</h2>
+        <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S.
+          Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year
+          terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a
+          precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal
+          judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal
+          uniformed officers, as well as trial of federal officials impeached by the House.</p>
+      </div>
+    </div>  
+    <div>
+    <div class="d-flex">
+      <div class="card-body d-flex flex-row">
+        <p>Filter by party:</p>
+        <div class="ml-3">
+          <input type="checkbox" id="cRep" class="checkParty" value="R" onclick="houseCheck()"> Republican
+          <input type="checkbox" id="cDem" class="checkParty" value="D" onclick="houseCheck()"> Democrat
+          <input type="checkbox" id="cInd" class="checkParty" value="I" onclick="houseCheck()"> Independent
+        </div>
+      </div>
+      <div class="card d-flex flex-row">
+        <select name="" value="" id="">
+          <option value="mono">ALL</option>
+          <option value="state">state</option>
+          <option value="seniority">seniority</option>
+          <option value="%"> % </option>
+        </select>
+      </div>
+    </div>
+      <div class="container-fluid">
+          <table id="senate-data" class="table table-hover"></table>
+      </div>
+  </section>
 
   <script>
   senateTables();
