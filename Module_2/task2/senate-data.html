@@ -6,6 +6,7 @@
   <script src="assets/js/senate-table.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style/red.css">
   <title>Senate data</title>
 </head>
 <body>
@@ -46,33 +47,35 @@
           judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal
           uniformed officers, as well as trial of federal officials impeached by the House.</p>
       </div>
-    </div>  
-    <div>
+    </div>
     <div class="d-flex">
-      <div class="card-body d-flex flex-row">
-        <p>Filter by party:</p>
-        <div class="ml-3">
-          <input type="checkbox" id="cRep" class="checkParty" value="R" onclick="houseCheck()"> Republican
-          <input type="checkbox" id="cDem" class="checkParty" value="D" onclick="houseCheck()"> Democrat
-          <input type="checkbox" id="cInd" class="checkParty" value="I" onclick="houseCheck()"> Independent
+      <div class="d-flex flex-fill">
+        <p class="pl-2 pt-2 pr-3 w-20 h-100">Filter by party:</p>
+        <div class="pl-2 pt-2 w-50 h-100">
+          <input type="checkbox" id="cRep" class="checkParty ml-3" value="R" onclick="senateCheck()"> Republican
+          <input type="checkbox" id="cDem" class="checkParty ml-3" value="D" onclick="senateCheck()"> Democrat
+          <input type="checkbox" id="cInd" class="checkParty ml-3" value="I" onclick="senateCheck()"> Independent
         </div>
       </div>
-      <div class="card d-flex flex-row">
-        <select name="" value="" id="">
-          <option value="mono">ALL</option>
-          <option value="state">state</option>
-          <option value="seniority">seniority</option>
-          <option value="%"> % </option>
-        </select>
+      <div class="d-flex flex-fill">
+        <p class="pl-3 pt-2 w-25 h-100 ">Filter by:</p>
+        <select class="custom-select w-100 h-100" name="" id="selectState" onchange="selectSelectionOptions()"> </select>
       </div>
     </div>
-      <div class="container-fluid">
-          <table id="senate-data" class="table table-hover"></table>
-      </div>
+    <div class="container-fluid">
+      <table id="senate-data" class="table table-hover"></table>
+    </div>
   </section>
+
+  <footer>
+    <div class="card-footer">
+      <p class="text-muted text-center">© 2016 | All Right Reserved</p>
+    </div>
+  </footer>
 
   <script>
   senateTables();
+  notDuplicate();
   </script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

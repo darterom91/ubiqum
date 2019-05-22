@@ -50,18 +50,22 @@
           state is entitled to at least one representative. </p>
       </div>
     </div>
-    <div class="card">
-      <div class="card-body d-flex flex-row">
-        <p>Filter by party:</p>
-        <div class="ml-3">
+    <div class="d-flex">
+      <div class="d-flex flex-fill">
+        <p class="pl-2 pt-2 pr-3 w-20 h-100">Filter by party:</p>
+        <div class="pl-2 pt-2 w-50 h-100">
           <input type="checkbox" id="cRep" class="checkParty" value="R" onclick="houseCheck()"> Republican
           <input type="checkbox" id="cDem" class="checkParty" value="D" onclick="houseCheck()"> Democrat
           <input type="checkbox" id="cInd" class="checkParty" value="I" onclick="houseCheck()"> Independent
         </div>
       </div>
-      <div class="container-fluid">
-        <table id="house-data" class="table table-hover"></table>
+      <div class="d-flex flex-fill">
+        <p class="pl-3 pt-2 w-25 h-100 ">Filter by:</p>
+        <select class="custom-select w-100 h-100" name="" id="selectState" onchange="selectSelectionOptions()"> </select>
       </div>
+    </div>
+    <div class="container-fluid">
+      <table id="house-data" class="table table-hover"></table>
     </div>
   </section>
 
@@ -73,6 +77,7 @@
 
   <script>
     houseTables();
+    notDuplicate();
   </script>
 
 
