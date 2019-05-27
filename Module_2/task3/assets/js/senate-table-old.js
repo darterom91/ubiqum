@@ -66,6 +66,7 @@ function selectSelectionOptions() {
     if (stateArrayOption[i].selected == true) {
       console.log('i = [' + i + '] value: ' + stateArrayOption[i].value);
       op = stateArrayOption[i].value;
+      senateTablesSelectFiltre();
     }
   }
   console.log(stateArrayOption.length);

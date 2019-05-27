@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <script src="assets/js/house.js"></script>
-  <script src="assets/js/house-table.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  <title>House data</title>
+  <script src="assets/js/senate.js"></script>
+  <script src="assets/js/senate-table.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style/red.css">
+  <title>Senate data</title>
 </head>
 <body>
-  <!-- As a heading -->
   <div>
     <a href="home.html">
       <img class="img-fluid" src="assets/img/tgif-260nw-95440702.png" width="300" height="150"
@@ -36,27 +36,25 @@
     </nav>
   </header>
   <!--Table container-->
-
   <section>
     <div class="card d-flex flex-row">
       <div class="card-body">
-        <h2 class="card-title">Congressmen</h2>
-        <p>The major power of the House is to pass federal legislation that affects the entire country, although its bills
-          must also be passed by the Senate and further agreed to by the U.S. President before becoming law (unless both the
-          House and Senate re-pass the legislation with a two-thirds majority in each chamber). The House has some exclusive
-          powers: the power to initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the
-          Senate), and to elect the U.S. President in case there is no majority in the Electoral College.</p>
-        <p>Each U.S. state is represented in the House in proportion to its population as measured in the census, but every
-          state is entitled to at least one representative. </p>
+        <h2 class="card-title">Senators</h2>
+        <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S.
+          Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year
+          terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a
+          precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal
+          judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal
+          uniformed officers, as well as trial of federal officials impeached by the House.</p>
       </div>
     </div>
     <div class="d-flex">
       <div class="d-flex flex-fill">
         <p class="pl-2 pt-2 pr-3 w-20 h-100">Filter by party:</p>
         <div class="pl-2 pt-2 w-50 h-100">
-          <input type="checkbox" id="cRep" class="checkParty" value="R" onclick="houseCheck()"> Republican
-          <input type="checkbox" id="cDem" class="checkParty" value="D" onclick="houseCheck()"> Democrat
-          <input type="checkbox" id="cInd" class="checkParty" value="I" onclick="houseCheck()"> Independent
+          <input type="checkbox" id="cRep" class="checkParty ml-3" value="R" onclick="senateCheck()"> Republican
+          <input type="checkbox" id="cDem" class="checkParty ml-3" value="D" onclick="senateCheck()"> Democrat
+          <input type="checkbox" id="cInd" class="checkParty ml-3" value="I" onclick="senateCheck()"> Independent
         </div>
       </div>
       <div class="d-flex flex-fill">
@@ -65,7 +63,7 @@
       </div>
     </div>
     <div class="container-fluid">
-      <table id="house-data" class="table table-hover"></table>
+      <table id="senate-data" class="table table-hover"></table>
     </div>
   </section>
 
@@ -76,10 +74,10 @@
   </footer>
 
   <script>
-    houseTables();
+    var filterMembers = [];
+    senateTables(filterMembers);
     notDuplicate();
   </script>
-
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
