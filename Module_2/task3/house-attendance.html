@@ -2,11 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <script src="assets/js/house.js"></script>
+  <script src="assets/js/house-attendance.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>house attendance</title>
 </head>
 <body>
+  <!-- As a heading -->
+  <div>
+    <a href="home.html">
+      <img class="img-fluid" src="assets/img/tgif-260nw-95440702.png" width="300" height="150"
+        class="d-inline-block align-top" alt="Logo TGIF">
+    </a>
+  </div>
+  <header class="m-5">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active"><a class="nav-link" href="home.html">Home<span
+                  class="sr-only">(current)</span></a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Congress 113</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li class="dropdown-item"><a href="senate-data.html">Senate</a></li>
+                <li class="dropdown-item"><a href="house-data.html">House</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Attandance</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li class="dropdown-item"><a href="senate-attendance.html">Senate</a></li>
+                <li class="dropdown-item"><a href="house-attendance.html">House</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Party Loyalty</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li class="dropdown-item"><a href="senate-party-loyalty.html">Senate</a></li>
+                <li class="dropdown-item"><a href="house-party-loyalty.html">House</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </nav>
+  </header>
+  <section class="m-5">
+    <div class="card d-flex flex-row flex-fill">
+      <div class="p-2 w-100">
+        <h2>Attendance</h2>
+        <div>
+          The Constitution specifies that a majority of members constitutes a quorum to do business in each house.
+          Representatives
+          and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most cases, debates
+          continue even
+          if a majority is not present.
   
+          The Senate uses roll-call votes; a clerk calls out the names of all the senators, each senator stating "aye" or
+          "no"
+          when his or her name is announced. The House reserves roll-call votes for the most formal matters, as a
+          roll-call of all
+          435 representatives takes quite some time; normally, members vote by electronic device. In the case of a tie,
+          the motion
+          in question fails. In the Senate, the Vice President may (if present) cast the tiebreaking vote.
+        </div>
+      </div>
+      <div class="p-2 container-fluid w-75">
+        <h2>House at a glance</h2>
+        <table id="house-attendance" class="table table-hover"></table>
+      </div>
+    </div>
+    <div class="card d-flex flex-row flex-fill">
+      <div class="p-2 w-100">
+        <h2>Least Engaged (Bottom 10% Attendance)</h2>
+        <table id="house-attendance-asc" class="table table-hover"></table>
+      </div>
+      <div class="p-2 w-100">
+        <h2>Most Engaged (Top 10% Attendance)</h2>
+        <table id="house-attendance-desc" class="table table-hover"></table>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="card-footer m-5">
+      <p class="text-muted text-center">© 2016 | All Right Reserved</p>
+    </div>
+  </footer>
+  <script>
+    numberPartyMembers();
+    calculatePCTVotes();
+    totalPCTVotesAsc();
+    totalPCTVotesDesc();
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </body>
 </html>
