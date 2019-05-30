@@ -1,8 +1,10 @@
 var datas = JSON.stringify(data);
 var dataForm = JSON.parse(datas);
 var members =  dataForm.results[0].members;
+var filterMembers = [];
 var filterMissedAsc = [], filterMissedDesc = [];
 var contR = 0, contD = 0, contI = 0, contTotal = 0;
+var missedTOT = 0, votesTOT = 0;
 var cont = 0;
 var rPCT = 0, dPCT = 0, iPCT = 0, tPCT = 0;
 var tablaParty = '', tablaAsc = '', tablaDesc = '';
@@ -10,10 +12,10 @@ var totalVotesR = 0;
 var totalVotesD = 0;
 var totalVotesI = 0;
 var totalVotesTOT = 0;
-var pct10 = 0, pct100 = 0;
+var pct10 = 0, pct10_10 = 0, pct100 = 0;
 
 function totalPCTVotesAsc() {
-  var numAux = 0;
+  var numAux = 10;
   cont = 0;
   console.log("totalPCTVotesAsc");
   console.log("EL 10%: " + pct10);
@@ -24,9 +26,9 @@ function totalPCTVotesAsc() {
 
   for (var i in members) {
     if (members[i].missed_votes_pct <= 10 && members[i].missed_votes_pct != 0) {
-      // if(cont<5){
-        filterMissedAsc[i] = members[i];
-      // }
+      if (cont < numAux) {
+        filterMissedAsc[cont] = members[i];
+      }
       cont++;
     }
   }
@@ -34,20 +36,25 @@ function totalPCTVotesAsc() {
 }
 
 function totalPCTVotesDesc() {
-  var numAux = 0;
+  var numAux = 10;
   cont = 0;
   console.log("totalPCTVotesDesc");
   console.log("EL 10%: " + pct10);
 
   members.reverse();
+  for (var i = 0; i <= pct10; i++) {
+    filterMembers[i]=members[i];
+  }
+
   for (var i in members) {
-    if (members[i].missed_votes_pct > 10) {
-      // if (cont < 5) {
-      filterMissedDesc[i] = members[i];
-      // }
+    if (members[i].missed_votes_pct >= 10) {
+      if (cont < numAux) {
+        filterMissedDesc[cont] = members[i];
+      }
       cont++;
     }
   }
+  console.log("Cantidad de miembros");
   senateTableMissedDesc();
 }
 
@@ -133,7 +140,13 @@ function calculatePCTVotes() {
       totalVotesI = totalVotesI + (dataForm.results[0].members[i].total_votes - dataForm.results[0].members[i].missed_votes);
 
     }
+    votesTOT += dataForm.results[0].members[i].missed_votes;
   }
+
+  votesTOT = 10 * votesTOT;
+  votesTOT = votesTOT / 100;
+  console.log("10% de votos perdidos: "+votesTOT);
+  
 
   totalVotesTOT = totalVotesR + totalVotesD;
   totalVotesTOT = totalVotesTOT + totalVotesI;
@@ -169,9 +182,14 @@ function numberPartyMembers() {
   contTotal = contR + contD;
   contTotal =  contTotal + contI;
 
-  pct10 = 10 / contTotal;
-  pct10 = pct10 * 100;
+  pct10 = 10 * contTotal;
+  pct10 = pct10 / 100;
+  pct10 = Math.round(pct10);
+  pct10_10 = 10 * pct10;
+  pct10_10 = pct10_10 / 100;
   pct100 = contTotal - pct10;
+  console.log("10 % "+contTotal+" = "+pct10);
+  console.log("10 % "+pct10+" = "+pct10_10);
 
   partyTablePCT();
 }

@@ -2,7 +2,7 @@ var datas = JSON.stringify(data);
 var dataForm = JSON.parse(datas);
 var members = dataForm.results[0].members;
 var filterMissedAsc = [], filterMissedDesc = [];
-var middleNotNull='';
+var middleNotNull = '';
 var contR = 0, contD = 0, contI = 0, contTotal = 0;
 var cont = 0;
 var rPCT = 0, dPCT = 0, iPCT = 0, tPCT = 0;
@@ -14,44 +14,45 @@ var totalVotesTOT = 0;
 var pct10 = 0, pct100 = 0;
 
 function totalPCTVotesAsc() {
+  var numAux = 10;
   cont = 0;
   console.log("totalPCTVotesAsc");
-  console.log("EL 10%: " + pct10);
+  console.log("EL 100%: " + pct100);
 
   members.sort(function (a, b) {
     return (a.votes_with_party_pct - b.votes_with_party_pct);
   });
 
   for (var i in members) {
-    if (members[i].votes_with_party_pct < 100 && members[i].votes_with_party_pct != 0) {
-      // if (cont < 5) {
+    if (members[i].votes_with_party_pct <= 100 && members[i].votes_with_party_pct != 0) {
+      if (cont < numAux) {
         filterMissedAsc[cont] = members[i];
-      // }
+      }
       cont++;
     }
   }
-  houseTableMissedAsc();
+  senateTableMissedAsc();
 }
 
 function totalPCTVotesDesc() {
+  var numAux = 10;
   cont = 0;
   console.log("totalPCTVotesDesc");
   console.log("EL 10%: " + pct10);
 
   members.reverse();
   for (var i in members) {
-    if (members[i].votes_with_party_pct > 10) {
-      // if (cont < 5) {
+    if (members[i].votes_with_party_pct >= 10 && members[i].votes_with_party_pct != 0) {
+      if (cont < numAux) {
         filterMissedDesc[cont] = members[i];
-      // }
+      }
       cont++;
     }
   }
-  houseTableMissedDesc();
+  senateTableMissedDesc();
 }
 
-function houseTableMissedAsc() {
-
+function senateTableMissedAsc() {
   tablaAsc = '';
   // Cabecera de la tabla th
 
@@ -74,16 +75,15 @@ function houseTableMissedAsc() {
     tablaAsc +=
       '<tbody><tr>' +
       '<td>' + filterMissedAsc[i].first_name + ' ' + middleNotNull + ' ' + filterMissedAsc[i].last_name + '</td>' +
-      '<td>' + filterMissedAsc[i].total_votes + '</td>' +
-      '<td>' + filterMissedAsc[i].votes_with_party_pct + '</td>' +
+    '<td>' + filterMissedAsc[i].total_votes + '</td>' +
+    '<td>' + filterMissedAsc[i].votes_with_party_pct + '</td>' +
       '</tr></tbody>'
   }
 
-  document.getElementById('house-party-loyalty-asc').innerHTML = tablaAsc;
+  document.getElementById('senate-party-loyalty-asc').innerHTML = tablaAsc;
 }
 
-function houseTableMissedDesc() {
-
+function senateTableMissedDesc() {
   tablaDesc = '';
   // Cabecera de la tabla th
 
@@ -97,20 +97,20 @@ function houseTableMissedDesc() {
   //cuerpo de  la tabla td num.toFixed(2)
   for (var i in filterMissedDesc) {
     if (filterMissedDesc[i].middle_name == null) {
-        middleNotNull = ' ';
-      } else {
+      middleNotNull = ' ';
+    } else {
       middleNotNull = filterMissedDesc[i].middle_name;
-      }
+    }
 
     tablaDesc +=
       '<tbody><tr>' +
-      '<td>' + filterMissedDesc[i].first_name + ' ' + middleNotNull + ' ' +filterMissedDesc[i].last_name+'</td>' +
-      '<td>' + filterMissedDesc[i].total_votes + '</td>' +
-      '<td>' + filterMissedDesc[i].votes_with_party_pct + '</td>' +
+      '<td>' + filterMissedDesc[i].first_name + ' ' + middleNotNull + ' ' + filterMissedDesc[i].last_name + '</td>' +
+    '<td>' + filterMissedDesc[i].total_votes + '</td>' +
+    '<td>' + filterMissedDesc[i].votes_with_party_pct + '</td>' +
       '</tr></tbody>'
   }
 
-  document.getElementById('house-party-loyalty-desc').innerHTML = tablaDesc;
+  document.getElementById('senate-party-loyalty-desc').innerHTML = tablaDesc;
 }
 
 function calculatePCTVotes() {
@@ -142,6 +142,8 @@ function calculatePCTVotes() {
   iPCT = (totalVotesI / totalVotesTOT) * 100;
 
   tPCT = rPCT + dPCT + iPCT;
+
+  console.log("total"+totalVotesTOT);
 
   pct10 = 10 / totalVotesTOT;
   pct10 = pct10 * 100;
@@ -207,5 +209,5 @@ function partyTablePCT() {
     '<td>' + tPCT.toFixed(0) + '</td>' +
     '</tr></tbody>'
 
-  document.getElementById('house-party-loyalty').innerHTML = tabla;
+  document.getElementById('senate-party-loyalty').innerHTML = tabla;
 }

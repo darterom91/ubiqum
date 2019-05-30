@@ -13,7 +13,7 @@ var totalVotesTOT = 0;
 var pct10 = 0, pct100 = 0;
 
 function totalPCTVotesAsc() {
-  var numAux = 0;
+  var numAux = 10;
   cont = 0;
   console.log("totalPCTVotesAsc");
   console.log("EL 10%: " + pct10);
@@ -22,12 +22,11 @@ function totalPCTVotesAsc() {
     return (a.missed_votes_pct - b.missed_votes_pct);
   });
 
-
   for (var i in members) {
-    if (members[i].missed_votes_pct < 10 && members[i].missed_votes_pct !=0) {
-      // if (cont < 5) {
-        filterMissedAsc[i] = members[i];
-      // }
+    if (members[i].missed_votes_pct <= 10 && members[i].missed_votes_pct != 0) {
+      if (cont < numAux) {
+        filterMissedAsc[cont] = members[i];
+      }
       cont++;
     }
   }
@@ -35,17 +34,17 @@ function totalPCTVotesAsc() {
 }
 
 function totalPCTVotesDesc() {
-  var numAux = 0;
+  var numAux = 10;
   cont = 0;
   console.log("totalPCTVotesDesc");
   console.log("EL 10%: " + pct10);
 
   members.reverse();
   for (var i in members) {
-    if (members[i].missed_votes_pct > 10) {
-      // if (cont < 5) {
-        filterMissedDesc[i] = members[i];
-      // }
+    if (members[i].missed_votes_pct >= 10) {
+      if (cont < numAux) {
+        filterMissedDesc[cont] = members[i];
+      }
       cont++;
     }
   }
