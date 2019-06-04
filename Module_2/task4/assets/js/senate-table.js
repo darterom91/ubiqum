@@ -181,7 +181,7 @@ function senateTablesFiltreStateParty(partyArray, op) {
 
 function notDatas() {
   console.log(partyArray.length);
-  
+
   tabla = '';
   // Cabecera de la tabla th
 

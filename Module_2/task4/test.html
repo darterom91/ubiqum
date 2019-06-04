@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <title>Test AJAX</title>
+</head>
+<body>
+  <script>
+    var url = 'https://api.propublica.org/congress/v1/113/senate/members.json';
+    var url2 = 'https://api.propublica.org/congress/v1/113/house/members.json';
+   authSenate();
+   authHouse();
+    function authSenate() {
+      fetch(url, {
+        method: 'GET',
+        headers: {
+          'X-API-Key': 'GsSYZ2inVKeuH50adSeijtpqabjqjgHOUD2nKFXA'
+        }
+      }).then(function (response) {
+        return response.json();
+      })
+        .then(function (myJson) {
+          console.log("authSenate");
+          console.log(myJson);
+        });
+    }
+
+    function authHouse() {
+      fetch(url, {
+        method: 'GET',
+        headers: {
+          'X-API-Key': 'GsSYZ2inVKeuH50adSeijtpqabjqjgHOUD2nKFXA'
+        }
+      }).then(function (response) {
+        return response.json();
+      })
+        .then(function (myJson) {
+          console.log("authHouse");
+          console.log(myJson);
+        });
+    }
+  </script>
+
+  <!-- X-API-Key
+  GsSYZ2inVKeuH50adSeijtpqabjqjgHOUD2nKFXA -->
+  
+  <!-- <div id="app">
+    {{message}}
+  </div>
+  <button id="boton" onclick="hello()">Click Me!!</button>
+
+  <div id="app2">
+    <p>{{message}}</p>
+    <p><input v-model="message"></p>
+  </div>
+
+  <script>
+  var obj = new Vue({
+    el : '#app',
+    data: {message: 'Hello VUE!!!'}
+  });
+
+  var obj2 = new Vue({
+      el: '#app2',
+      data: { message: 'Hello VUE!!!' }
+    });
+
+  function hello() {
+    console.log('El boton fue clicado: '+ document.getElementById("boton").click);
+    
+    if(document.getElementById("boton").click){
+      obj.message = "POLLO";
+      obj2.message = "POLLO2";
+    }
+  }
+  </script> -->
+</body>
+</html>
