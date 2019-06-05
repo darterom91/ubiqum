@@ -69,11 +69,11 @@
       </div>
     </div>
     <div class="d-flex">
-      <div class="d-flex flex-fill">
+      <div class="d-flex flex-fill" id="checkboxes">
         <p class="pl-2 pt-2 pr-3 w-20 h-100">Filter by party:</p>
         <div class="pl-2 pt-2 w-50 h-100">
-          <input type="checkbox" id="cRep" class="checkParty" value="R" onclick="houseCheck()"> Republican
-          <input type="checkbox" id="cDem" class="checkParty" value="D" onclick="houseCheck()"> Democrat
+          <input type="checkbox" id="cRep" class="checkParty" value="R" v-model="checkedNames" @click="houseCheck()"> Republican
+          <input type="checkbox" id="cDem" class="checkParty" value="D" v-model="checkedNames" @click="houseCheck()"> Democrat
         </div>
       </div>
       <div class="d-flex flex-fill">
@@ -82,7 +82,38 @@
       </div>
     </div>
     <div class="container-fluid">
-      <table id="house-data" class="table table-hover"></table>
+      <table id="app" class="table table-hover">
+
+      <thead>
+        <tr>
+          <th>All name</th>
+          <th>Party</th>
+          <th>state</th>
+          <th>seniority</th>
+          <th>%</th>
+        </tr>
+      </thead>
+
+        <tr v-for="(member, index) in members" :key="index">
+          <td>
+            {{member.first_name}}
+            {{member.middle_name}}
+            {{member.last_name}}
+          </td>
+          <td>
+            {{member.party}}
+          </td>
+          <td>
+            {{member.state}}
+          </td>
+          <td>
+            {{member.seniority}}
+          </td>
+          <td>
+            {{member.votes_with_party_pct}}
+          </td>
+        </tr>
+      </table>
     </div>
   </section>
 

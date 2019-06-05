@@ -3,10 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="assets/js/house-table-vue.js"></script>
   <title>Test AJAX</title>
 </head>
 <body>
-  <script>
+  <table id="app" >
+    <tr v-for="(member, index) in members" :key="index">
+      <td>
+        {{member.first_name}}
+      </td>
+      <td>
+        {{member.first_name}}
+      </td>
+      <td>
+        {{member.first_name}}
+      </td>
+      <td>
+        {{member.first_name}}
+      </td>
+      <td>
+        {{member.first_name}}
+      </td>
+    </tr>
+  </div>
+ 
+
+  <!-- <script>
     var url = 'https://api.propublica.org/congress/v1/113/senate/members.json';
     var url2 = 'https://api.propublica.org/congress/v1/113/house/members.json';
    authSenate();
@@ -40,7 +62,7 @@
           console.log(myJson);
         });
     }
-  </script>
+  </script> -->
 
   <!-- X-API-Key
   GsSYZ2inVKeuH50adSeijtpqabjqjgHOUD2nKFXA -->
