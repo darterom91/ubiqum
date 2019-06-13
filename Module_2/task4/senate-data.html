@@ -2,10 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <script src="assets/js/senate.js"></script>
-  <script src="assets/js/senate-table.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <script src="assets/js/senate-table-vue.js"></script> -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style/red.css">
@@ -67,21 +63,61 @@
       </div>
     </div>
     <div class="d-flex">
-      <div class="d-flex flex-fill">
+      <div class="d-flex flex-fill" id="checkboxes">
         <p class="pl-2 pt-2 pr-3 w-20 h-100">Filter by party:</p>
         <div class="pl-2 pt-2 w-50 h-100">
-          <input type="checkbox" id="cRep" class="checkParty ml-3" value="R" onclick="senateCheck()"> Republican
-          <input type="checkbox" id="cDem" class="checkParty ml-3" value="D" onclick="senateCheck()"> Democrat
-          <input type="checkbox" id="cInd" class="checkParty ml-3" value="I" onclick="senateCheck()"> Independent
+          <input type="checkbox" class="checkParty" value="R" v-model="checkedNames"
+            onclick="senateCheck()"> Republican
+          <input type="checkbox" class="checkParty" value="D" v-model="checkedNames"
+            onclick="senateCheck()"> Democrat
+            <input type="checkbox" class="checkParty" value="I" v-model="checkedNames"
+            onclick="senateCheck()"> Independent
+          <span>{{checkedNames}}</span>
         </div>
       </div>
       <div class="d-flex flex-fill">
         <p class="pl-3 pt-2 w-25 h-100 ">Filter by:</p>
-        <select class="custom-select w-100 h-100" name="" id="selectState" onchange="selectSelectionOptions()"> </select>
+        <select id="app2" class="custom-select w-100 h-100" onchange="selectSelectionOptions()">
+          <option class="options" value="all">All</option>
+          <option class="options" v-for="(opt, index) in opts" :key="index" >
+            {{opt}}
+          </option>
+        </select>
       </div>
     </div>
     <div class="container-fluid">
-      <table id="senate-data" class="table table-hover"></table>
+      <table id="app" class="table table-hover">
+    
+        <thead>
+          <tr>
+            <th>All name</th>
+            <th>Party</th>
+            <th>state</th>
+            <th>seniority</th>
+            <th>%</th>
+          </tr>
+        </thead>
+    
+        <tr v-for="(member, index) in members" :key="index">
+          <td>
+            {{member.first_name}}
+            {{member.middle_name}}
+            {{member.last_name}}
+          </td>
+          <td>
+            {{member.party}}
+          </td>
+          <td>
+            {{member.state}}
+          </td>
+          <td>
+            {{member.seniority}}
+          </td>
+          <td>
+            {{member.votes_with_party_pct}}
+          </td>
+        </tr>
+      </table>
     </div>
   </section>
 
@@ -92,11 +128,13 @@
   </footer>
 
   <script>
-    var filterMembers = [];
-    senateTables(filterMembers);
-    notDuplicate();
+    // var filterMembers = [];
+    // senateTables(filterMembers);
+    // notDuplicate();
   </script>
 
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <script src="assets/js/senate-table-vue.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"

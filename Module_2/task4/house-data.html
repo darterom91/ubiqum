@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <!-- <script src="assets/js/house.js"></script> -->
   <!-- <script src="assets/js/house-table.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <script src="assets/js/house-table-vue.js"></script>
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <title>House data</title>
 </head>
 <body>
+ 
   <!-- As a heading -->
   <div>
     <a href="home.html">
@@ -69,16 +69,24 @@
       </div>
     </div>
     <div class="d-flex">
+
       <div class="d-flex flex-fill" id="checkboxes">
         <p class="pl-2 pt-2 pr-3 w-20 h-100">Filter by party:</p>
         <div class="pl-2 pt-2 w-50 h-100">
-          <input type="checkbox" id="cRep" class="checkParty" value="R" v-model="checkedNames" @click="houseCheck()"> Republican
-          <input type="checkbox" id="cDem" class="checkParty" value="D" v-model="checkedNames" @click="houseCheck()"> Democrat
+          <input type="checkbox"class="checkParty" value="R" v-model="checkedNames" onclick="datos.then(result => cargarDatos(result))"> Republican
+          <input type="checkbox" class="checkParty" value="D" v-model="checkedNames" onclick="datos.then(result => cargarDatos(result))"> Democrat
+          <span>{{checkedNames}}</span>
         </div>
+
       </div>
       <div class="d-flex flex-fill">
         <p class="pl-3 pt-2 w-25 h-100 ">Filter by:</p>
-        <select class="custom-select w-100 h-100" name="" id="selectState" onchange="selectSelectionOptions()"> </select>
+        <select id="app2" class="custom-select w-100 h-100"> 
+          <option value="all">All</option>
+          <option v-for="(opt, index) in opts" :key="index" value="cosa">
+            {{opt}}
+          </option>
+        </select>
       </div>
     </div>
     <div class="container-fluid">
@@ -123,12 +131,30 @@
     </div>
   </footer>
 
-  <script>
-    // var filterMembers = [];
-    // houseTables(filterMembers);
-    // notDuplicate();
-  </script>
+  
 
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <script src="assets/js/house-table-vue.js"></script>
+
+  <!-- <script>
+    var url = 'https://api.propublica.org/congress/v1/113/house/members.json';
+    var myHeaders = {
+      method: 'GET',
+      headers: { 'X-API-Key': 'GsSYZ2inVKeuH50adSeijtpqabjqjgHOUD2nKFXA' }
+    };
+    let datos = varifyData500(url, myHeaders);
+    datos.then(result => {
+      return result;
+    });
+
+    function varifyData500(url, myHeaders) {
+      let datos = fetch(url, myHeaders)
+        .then(result => console.log("Funciona !!!"))
+        .catch(error => console.error("ERROR: ", error));
+      return datos;
+    }
+  </script> -->
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
