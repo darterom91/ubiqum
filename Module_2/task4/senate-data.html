@@ -79,7 +79,7 @@
         <p class="pl-3 pt-2 w-25 h-100 ">Filter by:</p>
         <select id="app2" class="custom-select w-100 h-100" onchange="selectSelectionOptions()">
           <option class="options" value="all">All</option>
-          <option class="options" v-for="(opt, index) in opts" :key="index" >
+          <option class="options" v-for="(opt, index) in opts" :key="index">
             {{opt}}
           </option>
         </select>
@@ -87,7 +87,7 @@
     </div>
     <div class="container-fluid">
       <table id="app" class="table table-hover">
-    
+
         <thead>
           <tr>
             <th>All name</th>
@@ -97,7 +97,7 @@
             <th>%</th>
           </tr>
         </thead>
-    
+
         <tr v-for="(member, index) in members" :key="index">
           <td>
             {{member.first_name}}
