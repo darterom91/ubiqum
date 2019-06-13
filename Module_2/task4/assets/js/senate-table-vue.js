@@ -39,6 +39,8 @@ function loadData(url, myHeaders) {
 }
 
 function cargarDatos(array) {
+  console.log("cargarDatos\n"
+            + "-----------\n\n");
   objGlobal = array;
   // selectSelectionOptions();
   // filterMembers = senateTablesFiltreStateParty();
@@ -72,7 +74,7 @@ function mostrar() {
 //functions
 function notDuplicate() {
   console.log("notDuplicate");
-  
+
   cont = 0;
   //Rellena todas las posiciones array aux
   for (var i = 0; i < objGlobal.results[0].members.length; i++) {
@@ -114,23 +116,29 @@ function notDuplicate() {
 }
 
 function selectSelectionOptions() {
-  console.log("selectSelectionOptions");
+  filterMembers = [];
+  console.log("selectSelectionOptions\n"
+            + "----------------------\n\n");
+  console.log("filterMembers.length: " + filterMembers.length);
   stateArrayOption = document.querySelectorAll('.options');
   console.log(stateArrayOption);
   for (var i = 0; i < stateArrayOption.length; i++) {
     if (stateArrayOption[i].selected == true) {
       // console.log('i = [' + i + '] value: ' + stateArrayOption[i].value);
       op = stateArrayOption[i].value;
-      datos.then(result => senateTablesFiltreStateParty(partyArray, op));
+      senateTablesFiltreStateParty(partyArray, op);
     }
   }
   // console.log(stateArrayOption.length);
-  datos.then(result => senateTablesFiltreStateParty(partyArray, op));
+  // senateTablesFiltreStateParty(partyArray, op);
 }
 
 function senateCheck() {
+  filterMembers = [];
   var cont2 = 0;
-  console.log("senateCheck");
+  console.log("senateCheck\n"
+            + "-----------\n\n");
+  console.log("filterMembers.length: "+filterMembers.length);
   filterCheck = document.querySelectorAll('.checkParty');
   // partyArray = checkboxes.checkedNames;
   // console.log(typeof filterCheck);
@@ -140,7 +148,7 @@ function senateCheck() {
       console.log('El value de i = ' + i + ': ' + filterCheck[i].value);
       // partyArray.push(filterCheck[i].value);
       partyArray[cont2] = filterCheck[i].value;
-      datos.then(result => senateTablesFiltreStateParty(partyArray, op));
+      senateTablesFiltreStateParty(partyArray, op);
       cont2++;
     } else if (filterCheck[i].checked == false) {
       partyArray.splice(i, 1); //bugs al quitar los elementos de la array
@@ -158,6 +166,12 @@ function senateCheck() {
 function senateTablesFiltreStateParty(partyArray, op) {
   filterMembers = [];
   cont = 0;
+  console.log("senateTablesFiltreStateParty\n"
+            + "----------------------------\n");
+  console.log("op: "+op);
+  for (var i = 0; i < partyArray.length; i++) {
+    console.log("partyArray ["+i+"]: "+partyArray[i]);
+  }
   // console.log('partyArray.lengt = ' + partyArray.length + " | op = " + op);
   if (partyArray.length != 0 && op == 0 || op == "ALL") {
     console.log('partyArray.length!=0 && op == 0 || op == "ALL"');
@@ -166,6 +180,7 @@ function senateTablesFiltreStateParty(partyArray, op) {
       for (var j in partyArray) {
         if (objGlobal.results[0].members[i].party == partyArray[j]) {
           // console.log('state:' + objGlobal.results[0].members[i].state + " == " + op + " name: " + objGlobal.results[0].members[i].first_name);
+          console.log("cont: " + cont);
           filterMembers[cont] = objGlobal.results[0].members[i];
           // console.log('contador: ' + filterMembers.length);
           cont++;
@@ -179,14 +194,15 @@ function senateTablesFiltreStateParty(partyArray, op) {
       for (var j in partyArray) {
         if (objGlobal.results[0].members[i].party == partyArray[j] && objGlobal.results[0].members[i].state == op) {
           // console.log('state:' + objGlobal.results[0].members[i].state + " == " + op + " name: " + objGlobal.results[0].members[i].first_name);
+          console.log("cont: " + cont);
           filterMembers[cont] = objGlobal.results[0].members[i];
           // console.log('contador: ' + filterMembers.length);
           cont++;
         } else {
           if (cont >= 0) {
-            // console.log("ELSE:: state:" + objGlobal.results[0].members[i].state + " == " + op + " name: " + objGlobal.results[0].members[i].first_name);
-            tabla = '<p>not have datas ' + objGlobal.results[0].members[i].state + '</p>';
-            cont++;
+            console.log("ELSE:: state:" + objGlobal.results[0].members[i].state + " == " + op + " name: " + objGlobal.results[0].members[i].first_name);
+            console.log("cont: " + cont);
+            // tabla = '<p>not have datas ' + objGlobal.results[0].members[i].state + '</p>';
           }
         }
       }
@@ -211,10 +227,16 @@ function senateTablesFiltreStateParty(partyArray, op) {
     }
   }
 
-  if (partyArray.length == 0 && op == 'ALL') {
-    // console.log("partyArray.length==0 && op =='ALL'");
+  if (partyArray.length == 0 && op == 'ALL' || op == 0) {
+    console.log("partyArray.length==0 && op =='ALL'");
     // houseTables(filterMembers);
   }
+
+  for (var i = 0; i < filterMembers.length; i++) {
+    // console.log("filterMembers First Name["+i+"]: "+filterMembers[i].first_name+" -- filterMembers STATE[" + i + "]: " + filterMembers[i].state);
+  }
+  console.log("cont: "+cont);
+  
   datos.then(result => cargarDatos(result));
   return filterMembers;
 }
