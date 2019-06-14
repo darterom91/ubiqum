@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <script src="assets/js/senate.js"></script>
-  <script src="assets/js/senate-parte-loyalty.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style/red.css">
   <title>senate party loyalty</title>
@@ -52,7 +50,7 @@
     </nav>
   </header>
   <section class="m-5">
-    <div class="card d-flex flex-row flex-fill">
+    <div id="app" class="card d-flex flex-row flex-fill">
       <div class="p-2 w-100">
         <h2>Party Loyalty</h2>
         <div>
@@ -62,17 +60,79 @@
       </div>
       <div class="p-2 container-fluid w-75">
         <h2>Senate at a glance</h2>
-        <table id="senate-party-loyalty" class="table table-hover"></table>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <td>Party</td>
+              <td>Number of Reps</td>
+              <td>% Voted with Party
+              </td>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Democrats</td>
+              <td>{{medD}}</td>
+              <td>{{medDPCT}}</td>
+            </tr>
+            <tr>
+              <td>Republicans</td>
+              <td>{{medR}}</td>
+              <td>{{medRPCT}}</td>
+            </tr>
+            <tr>
+              <td>Independents</td>
+              <td>{{medI}}</td>
+              <td>{{medIPCT}}</td>
+            </tr>
+            <tr>
+              <td>TOTAL</td>
+              <td>{{totVotes}}</td>
+              <td>100</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-    <div class="card d-flex flex-row flex-fill">
+    <div id="app2" class="card d-flex flex-row flex-fill">
       <div class="p-2 w-100">
         <h2>Least Loyal (Bottom 10% of Party)</h2>
-        <table id="senate-party-loyalty-asc" class="table table-hover"></table>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <td>Name</td>
+              <td>Number of Missed Votes</td>
+              <td>% Missed</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(a, index) in ascs" :key="index">
+              <td>{{a.first_name}} {{a.middle_name}} {{a.last_name}}</td>
+              <td>{{a.missed_votes}}</td>
+              <td>{{a.missed_votes_pct}}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div class="p-2 w-100">
         <h2>Most Loyal (Top 10% of Party)</h2>
-        <table id="senate-party-loyalty-desc" class="table table-hover"></table>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <td>Name</td>
+              <td>Number of Missed Votes</td>
+              <td>% Missed</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(d, index) in descs" :key="index">
+              <td>{{d.first_name}} {{d.middle_name}} {{d.last_name}}</td>
+              <td>{{d.missed_votes}}</td>
+              <td>{{d.missed_votes_pct}}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
@@ -81,12 +141,10 @@
       <p class="text-muted text-center">© 2016 | All Right Reserved</p>
     </div>
   </footer>
-  <script>
-    numberPartyMembers();
-    calculatePCTVotes();
-    totalPCTVotesAsc();
-    totalPCTVotesDesc();
-  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <script src="assets/js/senate-attendance-vue.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"

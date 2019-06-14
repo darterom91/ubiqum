@@ -129,7 +129,7 @@ function medVotes(app) {
   //medD
   for (var i in app.members) {
     if (app.members[i].party == "D") {
-      aux = aux + app.members[i].total_votes;
+      aux = aux + app.members[i].missed_votes;
       cont++;
     }
   }
@@ -142,7 +142,7 @@ function medVotes(app) {
   aux = 0;
   for (var i in app.members) {
     if (app.members[i].party == "R") {
-      aux = aux + app.members[i].total_votes;
+      aux = aux + app.members[i].missed_votes;
       cont++;
     }
   }
@@ -155,7 +155,7 @@ function medVotes(app) {
   aux = 0;
   for (var i in app.members) {
     if (app.members[i].party == "I") {
-      aux = aux + app.members[i].total_votes;
+      aux = aux + app.members[i].missed_votes;
       cont++;
     }
   }
@@ -171,7 +171,7 @@ function medVotesPct(app) {
   aux = 0;
   for (var i in app.members) {
     if (app.members[i].party == 'D') {
-      aux = aux + app.members[i].votes_with_party_pct;
+      aux = aux + app.members[i].missed_votes_pct;
       cont++;
     }
   }
@@ -185,7 +185,7 @@ function medVotesPct(app) {
   aux = 0;
   for (var i in app.members) {
     if (app.members[i].party == 'R') {
-      aux = aux + app.members[i].votes_with_party_pct;
+      aux = aux + app.members[i].missed_votes_pct;
       cont++;
     }
   }
@@ -198,7 +198,7 @@ function medVotesPct(app) {
   aux = 0;
   for (var i in app.members) {
     if (app.members[i].party == 'I') {
-      aux = aux + app.members[i].votes_with_party_pct;
+      aux = aux + app.members[i].missed_votes_pct;
       cont++;
     }
   }
