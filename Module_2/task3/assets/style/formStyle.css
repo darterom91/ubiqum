@@ -1,0 +1,136 @@
+@font-face{
+  src: url(../fonts/Calculator.ttf);
+  font-family: Calculator;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+}
+
+.testForm{
+  background-color: black;
+  padding: 10% 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.personalInfo{
+  border: 1px solid black;
+  background-color: white;
+  background-image: url("../img/placaMetal.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 5%;
+}
+
+.titleInfo{
+  font-family: Calculator;
+  background-color: rgb(3, 26, 4);
+  border: 1px solid white;
+  color: rgb(27, 154, 75);
+  font-size: 2em;
+  text-align: center;
+  text-decoration: initial;
+  padding: 3%;
+  margin: 30px;
+  opacity: 0.8;
+  filter: alpha(opacity=30); /* For IE8 and earlier */
+}
+
+.personalInfo h2{
+  font-family: Calculator;
+  color: rgb(190, 1, 74);
+  font-size: 1em;
+  padding: 1%;
+}
+
+.personalText{
+  background-color: grey;
+  background-image: url("../img/plastico.jpg");
+  background-repeat: no-repeat;
+  background-size: 971.81px 261.47px;
+  background-position: center;
+  border: 1px solid black;
+  margin: 30px;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 5%;
+}
+
+.personalText div{
+  background-color: black;
+  background-image: url("../img/cuero.jpg");
+  background-size: cover;
+  border: 1px solid goldenrod;
+  color: goldenrod;
+  font-size: 2em;
+  font-style: bold;
+  font-family: Calculator;
+  text-align: center;
+  text-decoration: initial;
+  padding: 50px 0px;
+  margin: 10px;
+  flex: 1;
+}
+
+.personalText div input{
+  margin: 5px 10px;
+}
+
+.radioNav{
+  background-color: seagreen;
+  border: 1px solid black;
+  margin: 30px;
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row ;
+}
+
+.radioNav div{
+  background-color: white;
+  opacity: 0.6;
+  border: 1px solid black;
+  color: black;
+  padding: 50px 35px;
+  flex: 1;
+}
+
+.radioNav div input{
+  margin: 0px 10px;
+  color: red;
+}
+
+.submit {
+  font-family: Calculator;
+  text-align: center;
+  width: 400px;
+  height: 50px;
+  background-color: brown;
+  color: black;
+  font-size: 2em;
+  margin-left: 30%;
+  transition: background 2s, color 4s;
+}
+
+.submit:hover{
+  background-color: darkorange;
+  color: red;
+}
+
+#test {
+  background: url(https://c1.staticflickr.com/9/8500/8315697815_69cb2a99ba_b.jpg);
+  background-size: cover;
+  color: lightgreen;
+  font: bold 14px arial;
+  width: 140px;
+  height: 140px;
+  border: 2px solid #999999;
+}

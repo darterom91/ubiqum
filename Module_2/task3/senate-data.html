@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="assets/js/senate.js"></script>
+  <script src="assets/js/senate-table.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style/red.css">
+  <title>Senate data</title>
+</head>
+<body>
+  <div>
+    <a href="home.html">
+      <img class="img-fluid" src="assets/img/tgif-260nw-95440702.png" width="300" height="150"
+        class="d-inline-block align-top" alt="Logo TGIF">
+    </a>
+  </div>
+  <header class="m-5">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active"><a class="nav-link" href="home.html">Home<span
+                  class="sr-only">(current)</span></a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Congress 113</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li class="dropdown-item"><a href="senate-data.html">Senate</a></li>
+                <li class="dropdown-item"><a href="house-data.html">House</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Attandance</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li class="dropdown-item"><a href="senate-attendance.html">Senate</a></li>
+                <li class="dropdown-item"><a href="house-attendance.html">House</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Party Loyalty</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li class="dropdown-item"><a href="senate-party-loyalty.html">Senate</a></li>
+                <li class="dropdown-item"><a href="house-party-loyalty.html">House</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </nav>
+  </header>
+  <!--Table container-->
+  <section class="m-5">
+    <div class="card d-flex flex-row">
+      <div class="card-body">
+        <h2 class="card-title">Senators</h2>
+        <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S.
+          Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year
+          terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a
+          precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal
+          judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal
+          uniformed officers, as well as trial of federal officials impeached by the House.</p>
+      </div>
+    </div>
+    <div class="d-flex">
+      <div class="d-flex flex-fill">
+        <p class="pl-2 pt-2 pr-3 w-20 h-100">Filter by party:</p>
+        <div class="pl-2 pt-2 w-50 h-100">
+          <input type="checkbox" id="cRep" class="checkParty ml-3" value="R" onclick="senateCheck()"> Republican
+          <input type="checkbox" id="cDem" class="checkParty ml-3" value="D" onclick="senateCheck()"> Democrat
+          <input type="checkbox" id="cInd" class="checkParty ml-3" value="I" onclick="senateCheck()"> Independent
+        </div>
+      </div>
+      <div class="d-flex flex-fill">
+        <p class="pl-3 pt-2 w-25 h-100 ">Filter by:</p>
+        <select class="custom-select w-100 h-100" name="" id="selectState" onchange="selectSelectionOptions()"> </select>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <table id="senate-data" class="table table-hover"></table>
+    </div>
+  </section>
+
+  <footer class="m-5">
+    <div class="card-footer">
+      <p class="text-muted text-center">© 2016 | All Right Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    var filterMembers = [];
+    senateTables(filterMembers);
+    notDuplicate();
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
