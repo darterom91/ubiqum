@@ -11,7 +11,6 @@
   </div>
 </template>
 
-
 <script>
 export default {
   name: 'cabecera'
