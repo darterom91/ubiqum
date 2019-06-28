@@ -9,12 +9,8 @@
       <b-row align-h="center" align-v="center" class="mt-2">
         <b-col cols="10" sm="10" md="10" class="border-bottom border-light rounded p-2">
           <b-row align-v="center" align-h="center">
-            <b-col cols="4" sm="4" md="4"><b-link to="/">Home</b-link></b-col>
-            <b-col cols="4" sm="4" md="4"><b-link to="/about">About</b-link></b-col>
-            <b-col cols="4" sm="6" md="4"><b-link to="/about">About</b-link></b-col>
-            <b-col cols="4" sm="6" md="4"><b-link to="/about">About</b-link></b-col>
-            <b-col cols="4" sm="6" md="4"><b-link to="/about">About</b-link></b-col>
-            <b-col cols="4" sm="6" md="4"><b-link to="/about">About</b-link></b-col>
+            <b-col cols="6" md="6"><a class="b-link"><b-link to="/">Home</b-link></a></b-col>
+            <b-col cols="6" md="6"><a class="b-link"><b-link to="/about">About</b-link></a></b-col>
           </b-row>
         </b-col>
       </b-row>
@@ -39,3 +35,12 @@ export default {
   name: 'pie'
 }
 </script>
+
+<style>
+.b-link a{
+  text-decoration: none;
+  font-style:
+  italic;
+  color:rgb(123, 254, 68);
+}
+</style>
