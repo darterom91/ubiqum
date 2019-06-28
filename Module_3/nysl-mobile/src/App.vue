@@ -1,18 +1,38 @@
 <template>
-  <div id="app">
-    <div id="nav">
+  <div id="app" class="bg-dark">
+    <div>
+      <cabecera/>
+    </div>
+    <div id="nav" class="bg-light">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-      <router-link to="/registration">Registration</router-link>
-      <router-link to="/gameInformation">Game Information</router-link>
-      <router-link to="/rule">Rule</router-link>
-      <router-link to="/contact">Contact</router-link>
     </div>
-    <router-view/>
+    <router-view class="bg-light"/>
+    <div>
+      <pie/>
+    </div>
   </div>
 </template>
 
+<script>
+import cabecera from '@/components/Cabecera.vue'
+import pie from '@/components/Pie.vue'
+
+export default {
+  components: {
+    cabecera,
+    pie
+  }
+}
+</script>
+
 <style>
+/* :root {
+  --black: black;
+}
+header {
+  background: var(--black);
+} */
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
