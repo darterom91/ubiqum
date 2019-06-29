@@ -2,8 +2,8 @@
   <div class="pie">
     <b-container>
       <b-row align-v="center">
-        <b-col cols="12" sm="12" md="12">
-          <h2 class="text-white text-center">NYLS</h2>
+        <b-col cols="12" sm="12" md="12" class="border-bottom border-light">
+          <h2 class="text-white text-center p-2">NYLS</h2>
         </b-col>
       </b-row>
       <b-row align-h="center" align-v="center" class="mt-2">
@@ -20,7 +20,7 @@
           </p>
         </b-col>
         <b-col cols="4" sm="3" md="2">
-          <b-link to="/"><b-img :src="require('../assets/nysl_logo.png')" fluid alt="Responsive image"></b-img></b-link>
+          <b-link to="/"><b-img class="p-2" :src="require('../assets/nysl_logo.png')" fluid alt="Responsive image"></b-img></b-link>
         </b-col>
         <b-col cols="4" sm="4" md="5">
           <p class="text-white">Lorem, ipsum.</p>
