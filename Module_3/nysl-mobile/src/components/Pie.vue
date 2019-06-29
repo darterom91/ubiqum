@@ -1,11 +1,6 @@
 <template>
-  <div class="pie">
+  <div class="pie">     
     <b-container>
-      <b-row align-v="center">
-        <b-col cols="12" sm="12" md="12" class="border-bottom border-light">
-          <h2 class="text-white text-center p-2">NYLS</h2>
-        </b-col>
-      </b-row>
       <b-row align-h="center" align-v="center" class="mt-2">
         <b-col cols="10" sm="10" md="10" class="border-bottom border-light rounded p-2">
           <b-row align-v="center" align-h="center">
