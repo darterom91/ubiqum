@@ -3,12 +3,15 @@
     <div>
       <cabecera/>
     </div>
-    <div id="nav" class="bg-light">
+    <!-- <div id="nav" class="bg-light">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
+    </div> -->
     <router-view class="bg-light"/>
     <div>
+      <div class="border-bottom border-light">
+          <h2 class="text-white text-center p-2">NYLS</h2>
+      </div>
       <pie/>
     </div>
   </div>
