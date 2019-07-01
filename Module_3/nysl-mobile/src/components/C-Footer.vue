@@ -1,5 +1,5 @@
 <template>
-  <div class="pie">     
+  <div class="C-Footer">     
     <b-container>
       <b-row align-h="center" align-v="center" class="mt-2">
         <b-col cols="10" sm="10" md="10" class="border-bottom border-light rounded p-2">
@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: 'pie'
+  name: 'C-Footer'
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="bg-dark">
     <div>
-      <cabecera/>
+      <CHeader/>
     </div>
     <!-- <div id="nav" class="bg-light">
       <router-link to="/">Home</router-link> |
@@ -12,19 +12,19 @@
       <div class="border-bottom border-light">
           <h2 class="text-white text-center p-2">NYLS</h2>
       </div>
-      <pie/>
+      <CFooter/>
     </div>
   </div>
 </template>
 
 <script>
-import cabecera from '@/components/Cabecera.vue'
-import pie from '@/components/Pie.vue'
+import CHeader from '@/components/C-Header.vue'
+import CFooter from '@/components/C-Footer.vue'
 
 export default {
   components: {
-    cabecera,
-    pie
+    CHeader,
+    CFooter
   }
 }
 </script>

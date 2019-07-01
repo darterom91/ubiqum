@@ -1,5 +1,5 @@
 <template>
-  <div class="cabecera mb-4 bg-light">
+  <div class="C-Header mb-4 bg-light">
     <b-container>
       <b-row align-v="center" align-h="start" class="pt-2 pb-3" >
         <b-col cols="8" md="9"><h1 class="text-left">NYSL</h1></b-col>
@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import NavBar from '@/components/NavBar.vue'
+import NavBar from '@/components/C-NavBar.vue'
 export default {
-  name: 'cabecera',
+  name: 'C-NavBar',
   components: {
     NavBar
   }
