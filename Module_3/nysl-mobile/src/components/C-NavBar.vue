@@ -8,6 +8,9 @@
           <b-navbar-nav>
             <b-nav-item to="/" exact>Home</b-nav-item>
             <b-nav-item to="/about">About</b-nav-item>
+            <b-nav-item to="/registration">Registration</b-nav-item>
+            <b-nav-item to="/gameInformation">Game Information</b-nav-item>
+            <b-nav-item to="/rules">Rules</b-nav-item>
             <b-nav-item to="/contact">Contact</b-nav-item>
           </b-navbar-nav>
         </b-collapse>

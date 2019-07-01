@@ -3,6 +3,7 @@
     <div class="p-2 mt-1 mb-1 bg-light">
       home
     </div>
+    <slides/>
     <sectionH/>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
@@ -12,11 +13,13 @@
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 import sectionH from '@/components/sections/sectionH.vue'
+import slides from '@/components/Slides.vue'
 export default {
   name: 'home',
   components: {
     HelloWorld,
-    sectionH
+    sectionH,
+    slides
   }
 }
 </script>
