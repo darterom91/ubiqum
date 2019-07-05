@@ -1,0 +1,550 @@
+{
+  "name": "NYSL",
+  "version": "0.0.1",
+  "teams": [
+    {
+      "id": 1,
+      "nameTeam": "Fire Ants",
+      "shield": "https://bookstore.uscsumter.edu/Uploads/MyGMImages/Fireants.png",
+      "stadio": "https://www.sefutbol.com/sites/default/files/n/campo_principal_1_1.jpg",
+      "players": [
+        {
+          "dorsal": "1",
+          "firstName": "Luke",
+          "lastName": "Ballard"
+        },
+        {
+          "dorsal": "2",
+          "firstName": "Ben",
+          "lastName": "Dwyer"
+        },
+        {
+          "dorsal": "3",
+          "firstName": "Kenny",
+          "lastName": "Gee"
+        },
+        {
+          "dorsal": "4",
+          "firstName": "Nick",
+          "lastName": "Koch"
+        },
+        {
+          "dorsal": "5",
+          "firstName": "Liam",
+          "lastName": "Meakins"
+        },
+        {
+          "dorsal": "6",
+          "firstName": "Luke",
+          "lastName": "Noble"
+        },
+        {
+          "dorsal": "7",
+          "firstName": "Ian",
+          "lastName": "Shaw"
+        },
+        {
+          "dorsal": "8",
+          "firstName": "Steve",
+          "lastName": "Williams"
+        },
+        {
+          "dorsal": "9",
+          "firstName": "Michael",
+          "lastName": "Brockwell"
+        },
+        {
+          "dorsal": "10",
+          "firstName": "Danny",
+          "lastName": "Ennis"
+        },
+        {
+          "dorsal": "11",
+          "firstName": "Steve",
+          "lastName": "Hamilton"
+        },
+        {
+          "dorsal": "12",
+          "firstName": "Aiden",
+          "lastName": "Mancini"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nameTeam": "Rivers FC",
+      "shield": "https://goalwa.files.wordpress.com/2013/04/threerivers_soccershield_darker_web.jpg?w=640",
+      "stadio": "https://img.milanuncios.com/fg/2810/34/281034676_2.jpg?VersionId=LvtUBWhHnlC_NKaoC3OeUewLvap2lk3W",
+      "players": [
+        {
+          "dorsal": "1",
+          "firstName": "Dave",
+          "lastName": "Alvarez"
+        },
+        {
+          "dorsal": "2",
+          "firstName": "Randall",
+          "lastName": "Banks"
+        },
+        {
+          "dorsal": "3",
+          "firstName": "Josh",
+          "lastName": "Bowden"
+        },
+        {
+          "dorsal": "4",
+          "firstName": "Rick",
+          "lastName": "Catania"
+        },
+        {
+          "dorsal": "5",
+          "firstName": "Kelvin",
+          "lastName": "Emeka"
+        },
+        {
+          "dorsal": "6",
+          "firstName": "Shane",
+          "lastName": "Kruse"
+        },
+        {
+          "dorsal": "7",
+          "firstName": "Mark",
+          "lastName": "Missenden"
+        },
+        {
+          "dorsal": "8",
+          "firstName": "Ashneel",
+          "lastName": "Pratap"
+        },
+        {
+          "dorsal": "9",
+          "firstName": "Toby",
+          "lastName": "Tomasson"
+        },
+        {
+          "dorsal": "10",
+          "firstName": "Juan",
+          "lastName": "Alvarez"
+        },
+        {
+          "dorsal": "11",
+          "firstName": "Nigel",
+          "lastName": "Berry"
+        },
+        {
+          "dorsal": "12",
+          "firstName": "Eddie",
+          "lastName": "Cabrero"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nameTeam": "Tiger Snakes",
+      "shield": "https://image.shutterstock.com/image-vector/tiger-soccer-team-260nw-1347541934.jpg",
+      "stadio": "https://www.mundodeportivo.com/r/GODO/MD/p2/Polideportivo/Imagenes/2014/07/28/Recortada/MD_20140728_MAS_DEPORTE_D_54413291609-652x492@MundoDeportivo-Web.jpg",
+      "players": [
+        {
+          "dorsal": "1",
+          "firstName": "Julian",
+          "lastName": "Bowdler"
+        },
+        {
+          "dorsal": "2",
+          "firstName": "Ashley",
+          "lastName": "Carlow"
+        },
+        {
+          "dorsal": "3",
+          "firstName": "Brett",
+          "lastName": "Gray"
+        },
+        {
+          "dorsal": "4",
+          "firstName": "Stephen",
+          "lastName": "Hine"
+        },
+        {
+          "dorsal": "5",
+          "firstName": "Jens",
+          "lastName": "Pieck"
+        },
+        {
+          "dorsal": "6",
+          "firstName": "Paul",
+          "lastName": "Thomas"
+        },
+        {
+          "dorsal": "7",
+          "firstName": "Stephen",
+          "lastName": "Zmuda"
+        },
+        {
+          "dorsal": "8",
+          "firstName": "Garry",
+          "lastName": "Brennan"
+        },
+        {
+          "dorsal": "9",
+          "firstName": "Steve",
+          "lastName": "Cassar"
+        },
+        {
+          "dorsal": "10",
+          "firstName": "Colm",
+          "lastName": "Hand"
+        },
+        {
+          "dorsal": "11",
+          "firstName": "Shayne",
+          "lastName": "Kelly"
+        },
+        {
+          "dorsal": "12",
+          "firstName": "Luka",
+          "lastName": "Podnar"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nameTeam": "Relics",
+      "shield": "https://www.designevo.com/res/templates/thumb_small/blue-wing-and-black-football.png",
+      "stadio": "http://www.valdodubra.com/galeria/visitas/images/images/bembibre-campo%20de%20futbol2_jpg.jpg",
+      "players": [
+        {
+          "dorsal": "1",
+          "firstName": "Lee",
+          "lastName": "Adams"
+        },
+        {
+          "dorsal": "2",
+          "firstName": "Rick",
+          "lastName": "Diaz"
+        },
+        {
+          "dorsal": "3",
+          "firstName": "Paul",
+          "lastName": "Flemming"
+        },
+        {
+          "dorsal": "4",
+          "firstName": "Paul",
+          "lastName": "Hopkins"
+        },
+        {
+          "dorsal": "5",
+          "firstName": "Luu",
+          "lastName": "Nam"
+        },
+        {
+          "dorsal": "6",
+          "firstName": "Jose",
+          "lastName": "Perez"
+        },
+        {
+          "dorsal": "7",
+          "firstName": "Dave",
+          "lastName": "Waddell"
+        },
+        {
+          "dorsal": "8",
+          "firstName": "Anthony",
+          "lastName": "Azarello"
+        },
+        {
+          "dorsal": "9",
+          "firstName": "Carlos",
+          "lastName": "Espinoza"
+        },
+        {
+          "dorsal": "10",
+          "firstName": "Nick",
+          "lastName": "Gill"
+        },
+        {
+          "dorsal": "11",
+          "firstName": "Brent",
+          "lastName": "Jones"
+        },
+        {
+          "dorsal": "12",
+          "firstName": "Jim",
+          "lastName": "Marsh"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nameTeam": "NP Gorillas",
+      "shield": "http://www.vfospain.com/__app__/equipos.controller.php?accion=dato&dato=escudo&id=1125",
+      "stadio": "https://photos.wikimapia.org/p/00/04/30/92/05_big.jpg",
+      "players": [
+        {
+          "dorsal": "1",
+          "firstName": "Scott",
+          "lastName": "Beale"
+        },
+        {
+          "dorsal": "2",
+          "firstName": "Richard",
+          "lastName": "Halvorsen"
+        },
+        {
+          "dorsal": "3",
+          "firstName": "Joel",
+          "lastName": "Johnston"
+        },
+        {
+          "dorsal": "4",
+          "firstName": "Todd",
+          "lastName": "Lourigan"
+        },
+        {
+          "dorsal": "5",
+          "firstName": "Keirin",
+          "lastName": "Niven"
+        },
+        {
+          "dorsal": "6",
+          "firstName": "Aaron",
+          "lastName": "Rodd"
+        },
+        {
+          "dorsal": "7",
+          "firstName": "Philip",
+          "lastName": "Sisson"
+        },
+        {
+          "dorsal": "8",
+          "firstName": "Stephen",
+          "lastName": "Thomas"
+        },
+        {
+          "dorsal": "9",
+          "firstName": "Ryan",
+          "lastName": "Warokra"
+        },
+        {
+          "dorsal": "10",
+          "firstName": "James",
+          "lastName": "Cleggett"
+        },
+        {
+          "dorsal": "11",
+          "firstName": "Michael",
+          "lastName": "Jewell"
+        },
+        {
+          "dorsal": "12",
+          "firstName": "Brad",
+          "lastName": "Kuypers"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "nameTeam": "Silverbacks",
+      "shield": "https://www.brownpapertickets.com/images/e/81d/81d0c0db-58d7-41cb-86db-87ba7e147f07-250.gif",
+      "stadio": "https://img.milanuncios.com/fg/2810/34/281034676_1.jpg?VersionId=XPY.z1EuOed3Cc4.wgrn5QYFMozfdLr5",
+      "players": [
+        {
+          "dorsal": "1",
+          "firstName": "Lee",
+          "lastName": "Anthony"
+        },
+        {
+          "dorsal": "2",
+          "firstName": "Andy",
+          "lastName": "Blair"
+        },
+        {
+          "dorsal": "3",
+          "firstName": "Lee",
+          "lastName": "Darlison"
+        },
+        {
+          "dorsal": "4",
+          "firstName": "Luke",
+          "lastName": "Hall"
+        },
+        {
+          "dorsal": "5",
+          "firstName": "Petr",
+          "lastName": "Jon"
+        },
+        {
+          "dorsal": "6",
+          "firstName": "Eran",
+          "lastName": "Medagoda"
+        },
+        {
+          "dorsal": "7",
+          "firstName": "Dario",
+          "lastName": "Murillo"
+        },
+        {
+          "dorsal": "8",
+          "firstName": "Miguel",
+          "lastName": "Ramirez"
+        },
+        {
+          "dorsal": "9",
+          "firstName": "Cane",
+          "lastName": "Seymour"
+        },
+        {
+          "dorsal": "10",
+          "firstName": "Craig",
+          "lastName": "Taylor"
+        },
+        {
+          "dorsal": "11",
+          "firstName": "Heath",
+          "lastName": "Young"
+        },
+        {
+          "dorsal": "12",
+          "firstName": "Aelans",
+          "lastName": "Araujo"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "nameTeam": "Rusty Rattlers",
+      "shield": "https://image.shutterstock.com/image-vector/rattler-red-shield-260nw-479277499.jpg",
+      "stadio": "http://www.instalacionesrade.es/FitxersWeb/64152/04-campo-futbol-atletico-escalerillas.jpg",
+      "players": [
+        {
+          "dorsal": "1",
+          "firstName": "Steve",
+          "lastName": "Atherton"
+        },
+        {
+          "dorsal": "2",
+          "firstName": "Richard",
+          "lastName": "Falzon"
+        },
+        {
+          "dorsal": "3",
+          "firstName": "Trevor",
+          "lastName": "Homan"
+        },
+        {
+          "dorsal": "4",
+          "firstName": "Jeffrey",
+          "lastName": "Marques"
+        },
+        {
+          "dorsal": "5",
+          "firstName": "Matt",
+          "lastName": "Nicholls"
+        },
+        {
+          "dorsal": "6",
+          "firstName": "Danny",
+          "lastName": "Slater"
+        },
+        {
+          "dorsal": "7",
+          "firstName": "Radeep",
+          "lastName": "Thapa"
+        },
+        {
+          "dorsal": "8",
+          "firstName": "Adam",
+          "lastName": "Cini"
+        },
+        {
+          "dorsal": "9",
+          "firstName": "Andy",
+          "lastName": "Greenwood"
+        },
+        {
+          "dorsal": "10",
+          "firstName": "Vinod",
+          "lastName": "Kumar"
+        },
+        {
+          "dorsal": "11",
+          "firstName": "Cameron",
+          "lastName": "Miller"
+        },
+        {
+          "dorsal": "12",
+          "firstName": "Lee",
+          "lastName": "Roberts"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "nameTeam": "Victoria Falls FC",
+      "shield": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToPOOXhogXMF9AQfu6c0J8J7Vwl1XOOvY7O5JoOye7ZjvZh56b",
+      "stadio": "http://cdvaldefierro.futbolaragon.com/pnfg/pimg/Campos/00100_0000038798_la%20azucarera.jpg",
+      "players": [
+        {
+          "dorsal": "1",
+          "firstName": "Zibonele",
+          "lastName": "Bhebhe"
+        },
+        {
+          "dorsal": "2",
+          "firstName": "Simba",
+          "lastName": "Chidzambwa"
+        },
+        {
+          "dorsal": "3",
+          "firstName": "Keith",
+          "lastName": "Mandisodza"
+        },
+        {
+          "dorsal": "4",
+          "firstName": "George",
+          "lastName": "Masvaure"
+        },
+        {
+          "dorsal": "5",
+          "firstName": "Alec",
+          "lastName": "Moyo"
+        },
+        {
+          "dorsal": "6",
+          "firstName": "Tari",
+          "lastName": "Mudadada"
+        },
+        {
+          "dorsal": "7",
+          "firstName": "Shingi",
+          "lastName": "Nyamukondiwa"
+        },
+        {
+          "dorsal": "8",
+          "firstName": "Biggie",
+          "lastName": "Tsongorera"
+        },
+        {
+          "dorsal": "9",
+          "firstName": "Stephen",
+          "lastName": "Zinyama"
+        },
+        {
+          "dorsal": "10",
+          "firstName": "Tawanda",
+          "lastName": "Buwu"
+        },
+        {
+          "dorsal": "11",
+          "firstName": "Simon",
+          "lastName": "Hadzisi"
+        },
+        {
+          "dorsal": "12",
+          "firstName": "Takavada",
+          "lastName": "Mapfumo"
+        }
+      ]
+    }
+  ]
+}

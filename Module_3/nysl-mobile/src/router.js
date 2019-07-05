@@ -37,6 +37,11 @@ export default new Router({
       path: '/contact',
       name: 'contact',
       component: () => import(/* webpackChunkName: "Contact" */ './views/Contact.vue')
+    },
+    {
+      path: '/teams/:id',
+      name: 'teams',
+      component: () => import(/* webpackChunkName: "Contact" */ './views/Teams.vue')
     }
   ]
 })
