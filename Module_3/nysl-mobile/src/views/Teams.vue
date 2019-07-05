@@ -7,8 +7,8 @@
         <div class="border border-dark">
           <h1>{{team.id}} | {{team.nameTeam}}</h1>
         </div>
-        <div class="border border-dark">
-          <b-img v-bind:src="team.shield" alt="" class="p-1 border border-dark"></b-img>
+        <div class=" border border-dark">
+          <b-img v-bind:src="team.shield" alt="" class="border border-dark"></b-img>
         </div>
         <div v-for="(player, Jindex) in team.players" :key="Jindex" class="border border-dark">
             <li>{{player.dorsal}} || {{player.firstName}}</li>
