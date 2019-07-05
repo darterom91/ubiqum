@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  name: 'section'
+  name: 'sectionH'
 }
 </script>
 

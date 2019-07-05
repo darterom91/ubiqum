@@ -1,5 +1,5 @@
 <template>
-  <div class="NavBar bg-success">
+  <div class="C-NavBar bg-success">
     <b-container>
     <b-navbar toggleable="md" type="dark" variant="success" >
       <b-navbar-brand href="#">NYSL</b-navbar-brand>
@@ -8,12 +8,10 @@
           <b-navbar-nav>
             <b-nav-item to="/" exact>Home</b-nav-item>
             <b-nav-item to="/about">About</b-nav-item>
-            <b-nav-item to="/servicios">servicios</b-nav-item>
-            <b-nav-item to="/contarFrutas">contarFrutas</b-nav-item>
-            <b-nav-item to="/forms">forms</b-nav-item>
-            <b-nav-item to="/columnas">columnas</b-nav-item>
-            <b-nav-item to="/CRUD">CRUD</b-nav-item>
-            <b-nav-item to="/Fotos/1">fotos</b-nav-item>
+            <b-nav-item to="/registration">Registration</b-nav-item>
+            <b-nav-item to="/gameInformation">Game Information</b-nav-item>
+            <b-nav-item to="/rules">Rules</b-nav-item>
+            <b-nav-item to="/contact">Contact</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
@@ -23,6 +21,6 @@
 
 <script>
 export default {
-  name: 'NavBar'
+  name: 'C-NavBar'
 }
 </script>
