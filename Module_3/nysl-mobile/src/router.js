@@ -41,6 +41,7 @@ export default new Router({
     {
       path: '/teams/:id',
       name: 'teams',
+      props: true,
       component: () => import(/* webpackChunkName: "Contact" */ './views/Teams.vue')
     }
   ]

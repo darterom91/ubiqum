@@ -1,8 +1,10 @@
 <template>
   <div class="gameInformation">
     <GINavTeam/>
+    <div class="p-2 mt-1 mb-1 bg-light">
+      Game Information
+    </div>
     <sectionGI/>
-    
     <!-- <b-navbar toggleable="lg" type="dark" variant="dark">
       <b-navbar-toggle target="teams"></b-navbar-toggle>
       <b-collapse id="teams" is-nav>
@@ -50,11 +52,13 @@
 <script>
 import sectionGI from '@/components/sections/sectionGI.vue'
 import GINavTeam from '@/components/GI-NavTeam.vue'
+import matchTable from '@/components/matchTable.vue'
 export default {
   name: 'gameInformation',
   components: {
     sectionGI,
-    GINavTeam
+    GINavTeam,
+    matchTable
   }
 }
 </script>
