@@ -7,6 +7,7 @@
           :to="{name: 'teams', params: {id: team.id}}"
           v-for="(team ,index) in posts.teams" :key="index">
             <b-img v-bind:src="team.shield" alt="" class="shield bg-white"></b-img>
+
           </router-link>
 
         </b-nav-item>
