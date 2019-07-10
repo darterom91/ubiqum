@@ -10,9 +10,10 @@ export default new Vuex.Store({
   },
   actions: {
     loadPost({commit}){
-      axios.get('https://api.myjson.com/bins/m6k0f')
+      axios.get('https://api.myjson.com/bins/sdjv7')
       .then(data => {
         let posts = data.data;
+        console.log("LoadPost()");
         console.log(data.data);
         commit('SET_POSTS', posts);
       })
@@ -21,6 +22,8 @@ export default new Vuex.Store({
   },
   mutations: {
     SET_POSTS(state, posts){
+      console.log("SET_POST()");
+      console.log(posts);
       state.posts = posts;
     }
   }
