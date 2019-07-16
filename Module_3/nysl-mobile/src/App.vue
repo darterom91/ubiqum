@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="bg-dark">
+  <div id="app" class="">
     <div>
       <CHeader/>
     </div>
@@ -10,7 +10,7 @@
     <router-view class="bg-light"/>
     <div>
       <div class="border-bottom border-light">
-          <h2 class="text-white text-center p-2">NYLS</h2>
+          <h2 class="text-dark text-center p-2">NYSL</h2>
       </div>
       <CFooter/>
     </div>

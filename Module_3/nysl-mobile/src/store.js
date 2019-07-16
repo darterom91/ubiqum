@@ -1,12 +1,14 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
+import firebase from 'firebase'
 
 Vue.use(Vuex, axios)
 
 export default new Vuex.Store({
   state: {
-    posts: []
+    posts: [],
+    user: null
   },
   actions: {
     loadPost({commit}){
