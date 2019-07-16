@@ -1,7 +1,7 @@
 <template>
   <div class="gameInformation">
     <GINavTeam/>
-    <div class="p-2 mt-1 mb-1 bg-light">
+    <div class="p-2 mt-1 mb-1 bg-dark">
       Game Information
     </div>
     <sectionGI/>

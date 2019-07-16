@@ -15,7 +15,7 @@
         </b-row>
         <b-row class="border border-dark bg-dark">
           <b-col cols="5" sm="5" md="5" class="bg-light">
-            <spam v-for="(team, Zindex) in posts.teams" :key="Zindex">
+            <span v-for="(team, Zindex) in posts.teams" :key="Zindex">
               <div class="d-flex justify-content-center" v-if="match.localId == team.id">
                 <div class="w-100 mt-2">
                   <p>{{team.nameTeam}}</p>
@@ -24,13 +24,13 @@
                   <b-img class="shield" v-bind:src="team.shield" alt=""></b-img>
                 </div>
               </div>
-            </spam>
+            </span>
           </b-col>
           <b-col cols="2" sm="2" md="2" class="timeMatch text-light p-1">
             18:00
           </b-col>
           <b-col cols="5" sm="5" md="5" class="bg-light">
-            <spam v-for="(team, Zindex) in posts.teams" :key="Zindex">
+            <span v-for="(team, Zindex) in posts.teams" :key="Zindex">
               <div class="d-flex" v-if="match.visitingId == team.id">
                 <div class=" mt-2">
                   <b-img class="shield" v-bind:src="team.shield" alt=""></b-img>
@@ -39,8 +39,8 @@
                   <p>{{team.nameTeam}}</p>
                 </div>
               </div>
-            </spam>
-          </b-col>  
+            </span>
+          </b-col>
         </b-row>
 
         </div>
