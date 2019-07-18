@@ -1,17 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+
 
 Vue.use(Router)
 
-export default new Router({
+const router =  new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
+      path: '*',
+      redirect: '/home'
+    },
+    {
       path: '/',
       name: 'home',
-      component: Home
+      component: () => import(/* webpackChunkName: "about" */ './views/Home.vue')
     },
     {
       path: '/about',
@@ -24,9 +28,19 @@ export default new Router({
       component: () => import(/* webpackChunkName: "Contact" */ './views/Registration.vue')
     },
     {
+      path: '/SignUp',
+      name: 'SignUp',
+      component: () => import(/* webpackChunkName: "Contact" */ './views/SignUp.vue')
+    },
+    {
+      path: '/SignIn',
+      name: 'SignIn',
+      component: () => import(/* webpackChunkName: "Contact" */ './views/SignIn.vue')
+    },
+    {
       path: '/gameInformation',
       name: 'gameInformation',
-      component: () => import(/* webpackChunkName: "Contact" */ './views/GameInformation.vue')
+      component: () => import(/* webpackChunkName: "Contact" */ './views/GameInformation.vue'),
     },
     {
       path: '/rules',
@@ -46,3 +60,5 @@ export default new Router({
     }
   ]
 })
+
+export default router;

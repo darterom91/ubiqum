@@ -4,7 +4,7 @@
     <!-- {{$route.params.id}} -->
     <div v-for="(team, Iindex) in posts.teams" :key="Iindex">
       <div v-if="id == team.id">
-        <div class="border border-dark my-2 p-2">
+        <div class="text-center border border-dark my-2 p-2">
           <h1>{{team.nameTeam}}</h1>
         </div>
         <div class="d-flex align-items-center border border-dark">

@@ -1,7 +1,7 @@
 <template>
   <div class="sectionH">
     <b-card class="text-center p-2">
-      <div class="bg-dark text-light rounded">
+      <div class="bg-dark text-light rounded m-auto">
         <b-media>
           <h2>August 4</h2>
           <b-media>

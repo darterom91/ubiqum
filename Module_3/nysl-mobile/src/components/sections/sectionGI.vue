@@ -1,22 +1,22 @@
 <template>
   <div class="sectionGI">
-    <b-container class="col-10 col-md-8">
+    <b-container class="col-10 col-md-6">
       <div v-for="(journey, Iindex) in posts.journeys" :key="Iindex" class="mb-3">
       <b-row align-v="center" class="">
-        <b-col cols="12" sm="12" md="12" class="bg-dark text-light p-2">
+        <b-col cols="12" sm="12" md="12" class="text-center bg-dark text-light p-2">
             <h3>{{journey.journeyId}} journey</h3>
         </b-col>
       </b-row>
       <div v-for="(match, Jindex) in journey.matchs" :key="Jindex">
         <b-row align-h="center" class="bg-success justify-content-center">
-          <b-col cols="10" sm="10" md="10" class="bg-secondary text-light p-2">
+          <b-col cols="10" sm="10" md="10" class="text-center bg-secondary text-light p-2">
             <h5>{{match.matchId}} match</h5>
           </b-col>
         </b-row>
         <b-row class="border border-dark bg-dark">
           <b-col cols="5" sm="5" md="5" class="bg-light">
             <span v-for="(team, Zindex) in posts.teams" :key="Zindex">
-              <div class="d-flex justify-content-center" v-if="match.localId == team.id">
+              <div class="d-flex justify-content-center text-center" v-if="match.localId == team.id">
                 <div class="w-100 mt-2">
                   <p>{{team.nameTeam}}</p>
                 </div>
@@ -26,7 +26,7 @@
               </div>
             </span>
           </b-col>
-          <b-col cols="2" sm="2" md="2" class="timeMatch text-light p-1">
+          <b-col cols="2" sm="2" md="2" class="timeMatch text-center text-light p-1">
             18:00
           </b-col>
           <b-col cols="5" sm="5" md="5" class="bg-light">

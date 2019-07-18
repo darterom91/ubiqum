@@ -8,7 +8,7 @@
           <b-navbar-nav>
             <b-nav-item to="/" exact>Home</b-nav-item>
             <b-nav-item to="/about">About</b-nav-item>
-            <b-nav-item to="/registration">Registration</b-nav-item>
+            <b-nav-item v-if="mostrar == true" to="/registration">Registration</b-nav-item>
             <b-nav-item to="/gameInformation">Game Information</b-nav-item>
             <b-nav-item to="/rules">Rules</b-nav-item>
             <b-nav-item to="/contact">Contact</b-nav-item>
@@ -20,7 +20,27 @@
 </template>
 
 <script>
+import firebase from 'firebase'
 export default {
-  name: 'C-NavBar'
+  name: 'C-NavBar',
+  data() {
+    return {
+      user: ''
+    }
+  },
+  computed: {
+    mostrar(){
+      if(firebase.auth().currentUser != null){
+        console.log('if mostrar');
+        
+        this.users = firebase.auth().currentUser.email;
+        return true;
+      }else{
+        console.log('else mostrar');
+        this.users = null;
+        return false;
+      }
+    }
+  },
 }
 </script>

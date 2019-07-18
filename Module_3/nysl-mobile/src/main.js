@@ -29,16 +29,19 @@ firebase.initializeApp(firebaseConfig)
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     console.log('conectado ' + user.email);
-    this.$router.push('/')
+    new Vue({
+      router,
+      store,
+      render: h => h(App)
+    }).$mount('#app')
+
   } else {
     console.log('no conectado');
     // No user is signed in.
-    this.$router.push('/login');
+    new Vue({
+      router,
+      store,
+      render: h => h(App)
+    }).$mount('#app')
   }
 });
-
-new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
