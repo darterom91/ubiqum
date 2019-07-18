@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="">
+    <navLogin/>
     <div>
       <CHeader/>
     </div>
@@ -8,9 +9,9 @@
       <router-link to="/about">About</router-link>
     </div> -->
     <router-view class="bg-light"/>
-    <div>
-      <div class="border-bottom border-light">
-          <h2 class="text-dark text-center p-2">NYSL</h2>
+    <div class="bg-dark">
+      <div class="border-bottom border-light  bg-dark mt-2">
+          <h2 class="text-light text-center p-3">NYSL</h2>
       </div>
       <CFooter/>
     </div>
@@ -18,13 +19,15 @@
 </template>
 
 <script>
+import navLogin from '@/components/navLogin.vue'
 import CHeader from '@/components/C-Header.vue'
 import CFooter from '@/components/C-Footer.vue'
 
 export default {
   components: {
     CHeader,
-    CFooter
+    CFooter,
+    navLogin
   }
 }
 </script>
@@ -40,7 +43,7 @@ header {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+ 
   color: #2c3e50;
 }
 #nav {

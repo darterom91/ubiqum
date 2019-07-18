@@ -1,9 +1,9 @@
 <template>
-  <div class="C-Header mb-4 bg-light">
+  <div class="C-Header bg-light">
     <b-container>
       <b-row align-v="center" align-h="start" class="pt-2 pb-3" >
-        <b-col cols="8" md="9"><h1 class="text-left">NYSL</h1></b-col>
-        <b-col cols="4" md="2">
+        <b-col cols="8" md="9"><h1 class="title text-left">NYSL</h1></b-col>
+        <b-col cols="3" md="2">
           <b-link to="/"><b-img :src="require('../assets/nysl_logo.png')" fluid alt="Responsive image"></b-img></b-link>
         </b-col>
       </b-row>
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style>
-  h1.text-left{
+  .title{
     font-size: 70px;
   }
 </style>

@@ -1,12 +1,12 @@
 <template>
   <div class="GI-NavTeam">
     <div>
-      <b-nav class="bg-dark border-top justify-content-center">
-        <b-nav-item class="navTeam pl-1 bg-dark" href="#">
+      <b-nav class="text-center bg-dark border-top justify-content-center">
+        <b-nav-item class="navTeam bg-dark" href="#">
           <router-link
           :to="{name: 'teams', params: {id: team.id}}"
           v-for="(team ,index) in posts.teams" :key="index">
-            <b-img v-bind:src="team.shield" alt="" class="shield bg-white"></b-img>
+            <b-img v-bind:src="team.shield" thumbnail rounded="circle" alt="" class="shield bg-white"></b-img>
 
           </router-link>
 
@@ -37,7 +37,6 @@ export default {
     width: 35px;
     height: 35px;
     margin-right: 3%; 
-    margin-top: 1%; 
   }
   .navTeam {
     width: 100%;
@@ -45,26 +44,33 @@ export default {
   }
   @media (min-width: 320px) {
   .shield {
-    height: 30px;
-    width: 30px;
-    margin-right: 3%; 
-    margin-top: 1%; 
+    height: 28px;
+    width: 28px;
+    margin-right: 1%; 
+  }
+
+  .navTeam {
+    padding-left: 0;
   }
 }
  @media (min-width: 360px) {
   .shield {
-    height: 40px;
-    width: 40px;
-    margin-right: 3%; 
-    margin-top: 1%; 
+    height: 35px;
+    width: 35px;
+    margin-right: 1%; 
+  }
+  .navTeam {
+    padding-left: 1%;
   }
 }
 @media (min-width: 576px) {
   .shield {
     height: 45px;
     width: 45px;
-    margin-right: 4%; 
-    margin-top: 1%; 
+    margin-right: 2.5%; 
+  }
+  .navTeam {
+    padding-left: 1%;
   }
 }
 
@@ -72,14 +78,17 @@ export default {
   .shield {
     height: 60px;
     width: 60px;
-    margin-right: 4%; 
+    margin-right: 1%; 
+  }
+  .navTeam {
+    padding-left: 0;
   }
 }
 @media (min-width: 992px) {
   .shield {
     height: 80px;
     width: 80px;
-    margin-right: 2%; 
+    margin-right: 1%; 
   }
 }
 @media (min-width: 1200px) {
@@ -87,6 +96,10 @@ export default {
     height: 80px;
     width: 80px;
     margin-right: 4%; 
+  }
+  .navTeam {
+    padding-left: 5%;
+    border:1px solid white;
   }
 }
 </style>
