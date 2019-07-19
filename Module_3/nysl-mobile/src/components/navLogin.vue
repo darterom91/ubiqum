@@ -1,7 +1,7 @@
 <template>
   <div class="bg-dark border-bottom border-dark d-flex justify-content-end">
     <div v-if="mostrar == false" class="text-light my-auto mx-auto">
-      <div class="py-2">No estas registrado</div>
+      <div class="py-2">You are not online</div>
     </div>
     <div v-if="mostrar == true" class="text-light m-auto">
       <div class="py-3">{{text}} {{users}}</div>
@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       users: null,
-      text: 'Hello'
+      text: 'Hi'
     }
   },
   computed: {
