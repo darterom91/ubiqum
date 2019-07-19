@@ -1,7 +1,7 @@
 <template>
   <div class="Registration">
     <signUp/>
-    <div @click="signGmail()"><img class="col-4 col-sm-4 col-md-4" src="@/assets/gmail.png" alt="gmail sign-Up"></div>
+    <div @click="signGmail()" class="text-center"><img class="col-1" src="@/assets/gmail.png" alt="gmail sign-Up"></div>
     <!-- <signIn/> -->
     <div class="border border-danger text-center">
       {{comprobarUser}}

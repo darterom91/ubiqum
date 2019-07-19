@@ -70,12 +70,12 @@ export default {
 
 <style scoped>
 .carousel-item img {
-    height: 400px;
+    height: 300px;
     width: 100%;
 }
   @media (max-width: 668px) {
       .carousel-item img {
-        height: 300px;
+        height: 200px;
         width: 100%;
   }
 }

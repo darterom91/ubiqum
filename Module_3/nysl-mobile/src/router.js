@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import firebase from 'firebase'
 
 
 Vue.use(Router)
@@ -10,17 +11,17 @@ const router =  new Router({
   routes: [
     {
       path: '*',
-      redirect: '/home'
+      redirect: '/'
     },
     {
       path: '/',
       name: 'home',
-      component: () => import(/* webpackChunkName: "about" */ './views/Home.vue')
+      component: () => import(/* webpackChunkName: "about" */ './views/Home.vue'),
     },
     {
       path: '/about',
       name: 'about',
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
     {
       path: '/registration',
@@ -41,6 +42,9 @@ const router =  new Router({
       path: '/gameInformation',
       name: 'gameInformation',
       component: () => import(/* webpackChunkName: "Contact" */ './views/GameInformation.vue'),
+      meta: {
+        authorization: true
+      }
     },
     {
       path: '/rules',
@@ -59,6 +63,19 @@ const router =  new Router({
       component: () => import(/* webpackChunkName: "Contact" */ './views/Teams.vue')
     }
   ]
+})
+
+router.beforeEach((to, from, next) => {
+  let users = firebase.auth().currentUser;
+  let authentication = to.matched.some(record => record.meta.authorization)
+
+  if (authentication && !users) {
+    next('SignUp');
+  }else if (!authentication && users) {
+    next();
+  }else{
+    next();
+  }
 })
 
 export default router;
