@@ -2,7 +2,7 @@
   <div class="signUp">
 
     <b-alert variant="danger" v-if="mostrar == true" show class="text-center">
-      <b-img src="https://i.ytimg.com/vi/P-MfCwLcKlk/hqdefault.jpg"></b-img>
+      <b-img class="col-10" src="https://i.ytimg.com/vi/P-MfCwLcKlk/hqdefault.jpg"></b-img>
       <h3>your are logged</h3>
       <a href="#" class="alert-link">Please return to home</a>
     </b-alert>
