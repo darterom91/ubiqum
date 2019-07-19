@@ -19,7 +19,7 @@
                 <b-col cols="5" sm="5" md="5" class="bg-light">
                   <span v-for="(team, Zindex) in posts.teams" :key="Zindex">
                     <div class="d-flex justify-content-center text-center" v-if="match.localId == team.id">
-                      <div class="w-100 text-center mt-2">
+                      <div class="w-100 text-center mx-auto mt-3">
                         <p>{{team.nameTeam}}</p>
                       </div>
                       <div class="m-auto">
@@ -37,7 +37,7 @@
                       <div class="m-auto">
                         <b-img class="shield border-dark rounded-circle" v-bind:src="team.shield" alt=""></b-img>
                       </div>
-                      <div class="w-100 text-center mt-2">
+                      <div class="w-100 text-center mx-auto mt-3">
                         <p>{{team.nameTeam}}</p>
                       </div>
                     </div>
@@ -137,7 +137,7 @@ p{
 .shield {
   height: 60px;
   width: 60px;
-  border: 3px solid;
+  border: 2px solid;
 }
 
 @media (min-width: 320px) {
@@ -145,11 +145,13 @@ p{
     margin-top: 0%;
    
     
-    height: 20px;
-    width: 20px;
+    height: 22.5px;
+    width: 22.5px;
+    
   }
   .w-100 > p{
     font-size: 8px;
+    font-weight: bold;
   }
 
   .timeMatch {
