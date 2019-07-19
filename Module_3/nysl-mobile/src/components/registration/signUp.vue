@@ -1,6 +1,6 @@
 <template>
   <div class="signUp">
-   <h3 class="text-center border-bottom border-dark col-10 col-sm-8 col-md-4  mx-auto p-2
+   <h3 class=" bg-dark text-light text-center border-bottom border-dark col-10 col-sm-8 col-md-4 mt-2 mx-auto p-2
    b-2 ">Sign Up</h3>
     <b-form @submit.prevent="onSignUp()" class="border  mx-auto p-2 col-10 col-sm-8 col-md-4">
       <b-form-group
@@ -36,6 +36,9 @@
       <div class="text-center">
         <b-button class="text-center mx-1 py-2" type="submit" variant="primary">Submit</b-button>
         <b-button class="text-center mx-1 py-2" type="reset" variant="danger">Reset</b-button>
+      </div>
+      <div class=" m-2">
+        <b-button @click="signGmail()" class=" bg-light text-dark"><img class="col-3" src="@/assets/gmail.png" alt="gmail sign-Up"> Sign-UP</b-button>
       </div>
     </b-form>
   </div>

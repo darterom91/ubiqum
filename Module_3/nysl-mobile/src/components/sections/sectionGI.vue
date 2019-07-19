@@ -1,48 +1,51 @@
 <template>
   <div class="sectionGI">
-    <b-container class="col-10 col-md-6">
-      <div v-for="(journey, Iindex) in posts.journeys" :key="Iindex" class="mb-3">
-      <b-row align-v="center" class="">
-        <b-col cols="12" sm="12" md="12" class="text-center bg-dark text-light p-2">
-            <h3>{{journey.journeyId}} journey</h3>
-        </b-col>
-      </b-row>
-      <div v-for="(match, Jindex) in journey.matchs" :key="Jindex">
-        <b-row align-h="center" class="bg-success justify-content-center">
-          <b-col cols="10" sm="10" md="10" class="text-center bg-secondary text-light p-2">
-            <h5>{{match.matchId}} match</h5>
-          </b-col>
-        </b-row>
-        <b-row class="border border-dark bg-dark">
-          <b-col cols="5" sm="5" md="5" class="bg-light">
-            <span v-for="(team, Zindex) in posts.teams" :key="Zindex">
-              <div class="d-flex justify-content-center text-center" v-if="match.localId == team.id">
-                <div class="w-100 mt-2">
-                  <p>{{team.nameTeam}}</p>
-                </div>
-                <div class=" mt-2">
-                  <b-img class="shield" v-bind:src="team.shield" alt=""></b-img>
-                </div>
-              </div>
-            </span>
-          </b-col>
-          <b-col cols="2" sm="2" md="2" class="timeMatch text-center text-light p-1">
-            18:00
-          </b-col>
-          <b-col cols="5" sm="5" md="5" class="bg-light">
-            <span v-for="(team, Zindex) in posts.teams" :key="Zindex">
-              <div class="d-flex" v-if="match.visitingId == team.id">
-                <div class=" mt-2">
-                  <b-img class="shield" v-bind:src="team.shield" alt=""></b-img>
-                </div>
-                <div class="w-100 mt-2">
-                  <p>{{team.nameTeam}}</p>
-                </div>
-              </div>
-            </span>
-          </b-col>
-        </b-row>
-
+    <b-container >
+      <div v-for="(journey, Iindex) in posts.journeys" :key="Iindex" class="">
+        <div class="col-12 border border-dark my-2">
+          <b-row align-v="center" class="">
+            <b-col cols="12" sm="12" md="12" class="text-center bg-dark text-light p-2">
+                <h3>{{journey.journeyId}} journey</h3>
+            </b-col>
+          </b-row>
+          <div v-for="(match, Jindex) in journey.matchs" :key="Jindex">
+            <div class="m-2">
+              <b-row align-h="center" class="bg-success justify-content-center">
+                <b-col cols="10" sm="10" md="10" class="text-center bg-secondary text-light p-2">
+                  <h5>{{match.matchId}} match</h5>
+                </b-col>
+              </b-row>
+              <b-row class="border border-dark bg-dark">
+                <b-col cols="5" sm="5" md="5" class="bg-light">
+                  <span v-for="(team, Zindex) in posts.teams" :key="Zindex">
+                    <div class="d-flex justify-content-center text-center" v-if="match.localId == team.id">
+                      <div class="w-100 text-center mt-2">
+                        <p>{{team.nameTeam}}</p>
+                      </div>
+                      <div class="m-auto">
+                        <b-img class="shield border-dark rounded-circle" v-bind:src="team.shield" alt=""></b-img>
+                      </div>
+                    </div>
+                  </span>
+                </b-col>
+                <b-col cols="2" sm="2" md="2" class="timeMatch text-center m-auto text-light p-1">
+                  18:00
+                </b-col>
+                <b-col cols="5" sm="5" md="5" class="bg-light">
+                  <span v-for="(team, Zindex) in posts.teams" :key="Zindex">
+                    <div class="d-flex" v-if="match.visitingId == team.id">
+                      <div class="m-auto">
+                        <b-img class="shield border-dark rounded-circle" v-bind:src="team.shield" alt=""></b-img>
+                      </div>
+                      <div class="w-100 text-center mt-2">
+                        <p>{{team.nameTeam}}</p>
+                      </div>
+                    </div>
+                  </span>
+                </b-col>
+              </b-row>
+            </div>
+          </div>
         </div>
       </div>
     </b-container>
@@ -134,76 +137,63 @@ p{
 .shield {
   height: 60px;
   width: 60px;
+  border: 3px solid;
 }
 
 @media (min-width: 320px) {
   .shield {
     margin-top: 0%;
-    margin-right: 5%;
-    margin-left: 5%;
+   
+    
     height: 20px;
     width: 20px;
   }
   .w-100 > p{
     font-size: 8px;
-    margin-top: 10%;
-    margin-right: 0%;
-    margin-left: 10%;
   }
 
   .timeMatch {
     font-size: 8px;
-    margin-top: 3%;
   }
 }
 
 @media (min-width: 360px) {
   .shield {
-    margin-top: 5%;
-    margin-right: 5%;
-    margin-left: 5%;
+   
+    
     height: 30px;
     width: 30px;
   }
   .w-100 > p{
-    font-size: 10px;
-    margin-top: 10%;
-    margin-right: 0%;
-    margin-left: 10%;
+    font-size: 8px;
   }
 
   .timeMatch {
-    font-size: 10px;
-    margin-top: 3%;
+    font-size: 8px;
   }
 }
 
 @media (min-width: 400px) {
   .shield {
-    margin-top: 5%;
-    margin-right: 5%;
-    margin-left: 5%;
+   
+    
     height: 30px;
     width: 30px;
   }
   .w-100 > p{
     font-size: 10px;
-    margin-top: 10%;
-    margin-right: 0%;
-    margin-left: 10%;
   }
 
   .timeMatch {
     font-size: 10px;
-    margin-top: 3%;
   }
 }
 
 @media (min-width: 576px) {
   .shield {
     margin-top: 0%;
-    margin-right: 5%;
-    margin-left: 5%;
+   
+    
     height: 30px;
     width: 30px;
   }
@@ -216,14 +206,13 @@ p{
 
   .timeMatch {
     font-size: 12px;
-    margin-top: 3%;
   }
 }
 
 @media (min-width: 768px) {
   .shield {
-    margin-right: 5%;
-    margin-left: 5%;
+   
+    
     height: 60px;
     width: 60px;
   }
@@ -243,8 +232,8 @@ p{
 }
 @media (min-width: 992px) {
   .shield {
-    margin-right: 5%;
-    margin-left: 5%;
+   
+    
     height: 60px;
     width: 60px;
   }
@@ -253,7 +242,6 @@ p{
   } */
   .w-100 > p{
     font-size: 18px;
-    margin-top: 5%;
     margin-right: 10%;
     margin-left: 10%;
   }
@@ -264,8 +252,8 @@ p{
 }
 @media (min-width: 1200px) {
   .shield {
-    margin-right: 5%;
-    margin-left: 5%;
+   
+    
     height: 100px;
     width: 100px;
   }
@@ -281,7 +269,6 @@ p{
 
   .timeMatch {
     font-size: 20px;
-     margin-top: 3%;
-  }
+   }
 }
 </style>

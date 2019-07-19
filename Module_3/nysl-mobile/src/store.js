@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
+import router from './router'
+import store from './store'
 import firebase from 'firebase'
 
 Vue.use(Vuex, axios)
@@ -35,6 +37,7 @@ export default new Vuex.Store({
             commit('setUser', user)
             auth.currentUser.sendEmailVerification();
           })
+        .then(() => Router.replace('home'))
         .catch(error => console.error(error))
     },
     signUserIn({ commit }, payload) {
@@ -45,7 +48,11 @@ export default new Vuex.Store({
             let user = data.data
             commit('setUser', user)
           })
+        .then(() => router.replace('home'))
         .catch(error => console.error(error))
+    },
+    accessUser({ commit }) {
+      commit('setUser', localStorage.getItem('user'));
     },
   },
   mutations: {
