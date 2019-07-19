@@ -6,14 +6,14 @@
       <a href="#" class="alert-link">Please return to home</a>
     </b-alert>
    
-   <b-alert variant="warning" v-if="mostrar == false" show class=" col-10 mx-auto mt-2 text-center">
+   <b-alert variant="warning" v-if="mostrar == false" show class=" col-10 col-sm-8 col-md-6 mx-auto mt-2 text-center">
 
      <b-img class="col-8" src="http://img.archiexpo.es/images_ae/photo-mg/11144-5629287.jpg"></b-img>
       <h3 class="">you are not logged!!!</h3>
       <p>Please loggin in my page</p>
    </b-alert>
 
-    <b-form v-if="mostrar == false" @submit.prevent="onSignIn()" class="text-dark border border-dark rounded mx-auto mt-2 p-0 col-8">
+    <b-form v-if="mostrar == false" @submit.prevent="onSignIn()" class="text-dark border border-dark rounded mx-auto mt-2 p-0 col-10 col-sm-8 col-md-6">
       <h3 class="bg-dark text-light text-center border border-dark ">Sign In</h3>
       <b-form-group
         class="py-2 mx-2"
@@ -46,7 +46,7 @@
       </b-form-group>
       <div class="text-center">
         <b-button class="col-4 text-center mx-1 my-2 py-2" type="submit" variant="primary">Submit</b-button>
-        <b-button class="col4 text-center mx-1 my-2 py-2" type="reset" variant="danger">Reset</b-button>
+        <b-button class="col-4 text-center mx-1 my-2 py-2" type="reset" variant="danger">Reset</b-button>
       </div>
     </b-form>
   </div>

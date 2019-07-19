@@ -1,9 +1,9 @@
 <template>
   <div class="gameInformation">
     <GINavTeam/>
-    <div class="text-center p-2 mb-2 bg-light border-bottom border-top border-dark">
+    <h3 class="text-center p-2 mb-2 bg-light border-bottom border-top border-dark">
       Game Information
-    </div>
+    </h3>
     <sectionGI/>
     <!-- <b-navbar toggleable="lg" type="dark" variant="dark">
       <b-navbar-toggle target="teams"></b-navbar-toggle>

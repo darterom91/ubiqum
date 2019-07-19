@@ -37,9 +37,9 @@
         <b-button class="text-center mx-1 py-2" type="submit" variant="primary">Submit</b-button>
         <b-button class="text-center mx-1 py-2" type="reset" variant="danger">Reset</b-button>
       </div>
-      <div class=" m-2">
-        <b-button @click="signGmail()" class=" bg-light text-dark"><img class="col-3" src="@/assets/gmail.png" alt="gmail sign-Up"> Sign-UP</b-button>
-      </div>
+        <b-button block @click="signGmail()" class="text-left mt-2 bg-light text-dark"><img class="col-3 col-sm-2" src="@/assets/gmail.png" alt="gmail sign-Up"> Sign-up with Gmail
+        </b-button>
+      
     </b-form>
   </div>
 </template>

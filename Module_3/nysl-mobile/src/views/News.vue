@@ -1,18 +1,18 @@
 <template>
-  <div class="contact">
+  <div class="News">
     <h3 class="text-center p-2 mb-2 bg-light border-bottom border-top border-dark">
-      Contact
+      News page
     </h3>
-    <sectionC/>
+    <sectionNews/>
   </div>
 </template>
 
 <script>
-import sectionC from '@/components/sections/sectionC.vue'
+import sectionNews from '@/components/sections/sectionNews.vue'
 export default {
-  name: 'contact',
+  name: 'news',
   components: {
-    sectionC
+    sectionNews
   }
 }
 </script>

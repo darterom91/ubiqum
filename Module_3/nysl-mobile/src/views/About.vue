@@ -1,8 +1,8 @@
 <template>
   <div class="about bg-dark">
-    <div class="text-center p-2 mb-2 bg-light border-bottom border-top border-dark">
-      about page
-    </div>
+    <h3 class="text-center p-2 mb-2 bg-light border-bottom border-top border-dark">
+      About page
+    </h3>
     <sectionAB/>
   </div>
 </template>

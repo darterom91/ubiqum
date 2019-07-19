@@ -47,9 +47,9 @@ const router =  new Router({
       }
     },
     {
-      path: '/rules',
-      name: 'rules',
-      component: () => import(/* webpackChunkName: "Contact" */ './views/Rules.vue')
+      path: '/News',
+      name: 'News',
+      component: () => import(/* webpackChunkName: "Contact" */ './views/News.vue')
     },
     {
       path: '/contact',

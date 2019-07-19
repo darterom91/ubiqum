@@ -1,8 +1,8 @@
 <template>
   <div class="home bg-dark">
-    <div class="text-center p-2 mb-2 bg-light border-bottom border-top border-dark">
-      home
-    </div>
+    <h3 class="text-center p-2 mb-2 bg-light border-bottom border-top border-dark">
+      Home
+    </h3>
     <slides/>
     <sectionH/>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
