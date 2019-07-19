@@ -8,7 +8,7 @@
           <h1 class="m-auto">{{team.nameTeam}}</h1>
         </div>
         <div class="bg-dark text-center p-2">
-          <img v-bind:src="team.shield" alt="" class=" col-6 bg-white border-light rounded" style="border: 2px solid">
+          <img v-bind:src="team.shield" alt="" class=" col-6 col-sm-6 col-md-4 bg-white border-light rounded" style="border: 2px solid">
         </div>
         <div class="">
           <div v-for="(player, Jindex) in team.players" :key="Jindex" class="border border-dark">

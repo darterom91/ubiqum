@@ -77,6 +77,12 @@ export default {
       .carousel-item img {
         height: 200px;
         width: 100%;
+      }
   }
+  @media (min-width: 1200px) {
+    .carousel-item img {
+        height: 500px;
+        width: 100%;
+    }
 }
 </style>
