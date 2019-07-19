@@ -54,7 +54,7 @@
 
 <script>
 import firebase from 'firebase'
-import Router from 'vue-router'
+
 export default {
   name: 'signIn',
   data() {
@@ -70,7 +70,7 @@ export default {
     mostrar(){
       if(firebase.auth().currentUser != null){
         console.log('if mostrar');
-        
+
         this.users = firebase.auth().currentUser.email;
         return true;
       }else{

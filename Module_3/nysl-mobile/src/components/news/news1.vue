@@ -10,7 +10,7 @@
     class="mx-auto "
   >
     <b-card-text>
-      Relics begins training for the next football league. The players are eager to start the championship
+      Relics begins training for the next football league. The players are eager to start the championship and release the new kit.
     </b-card-text>
     <b-card>
       <b-form @submit.prevent="enviarMensajes()">

@@ -49,7 +49,10 @@ const router =  new Router({
     {
       path: '/News',
       name: 'News',
-      component: () => import(/* webpackChunkName: "Contact" */ './views/News.vue')
+      component: () => import(/* webpackChunkName: "Contact" */ './views/News.vue'),
+      meta: {
+        authorization: true
+      }
     },
     {
       path: '/contact',
