@@ -8,7 +8,7 @@
             <b-col cols="6" md="6"><a class="b-link"><b-link to="/about">About</b-link></a></b-col>
             <b-col cols="6" md="6"><a class="b-link"><b-link to="/registration">Registration</b-link></a></b-col>
             <b-col cols="6" md="6"><a class="b-link"><b-link to="/gameInformation">Game Information</b-link></a></b-col>
-            <b-col cols="6" md="6"><a class="b-link"><b-link to="/rules">Rules</b-link></a></b-col>
+            <b-col cols="6" md="6"><a class="b-link"><b-link to="/News">News</b-link></a></b-col>
             <b-col cols="6" md="6"><a class="b-link"><b-link to="/contact">Contact</b-link></a></b-col>
           </b-row>
         </b-col>
