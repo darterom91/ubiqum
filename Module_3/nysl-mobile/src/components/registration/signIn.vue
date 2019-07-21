@@ -3,7 +3,7 @@
     <b-alert variant="danger" v-if="mostrar == true" show class=" col-10 col-sm-8 col-md-6 mx-auto mt-2 text-center">
       <b-img class="col-10" src="https://i.ytimg.com/vi/P-MfCwLcKlk/hqdefault.jpg"></b-img>
       <h3>you are logged !!!</h3>
-      <a href="#" class="alert-link">Please return to home</a>
+      <a href="@/views/home.vue" class="alert-link">Please return to home</a>
     </b-alert>
    
    <b-alert variant="warning" v-if="mostrar == false" show class=" col-10 col-sm-8 col-md-6 mx-auto mt-2 text-center">
@@ -14,7 +14,7 @@
    </b-alert>
 
     <b-form v-if="mostrar == false" @submit.prevent="onSignIn()" class="text-dark border border-dark rounded mx-auto mt-2 p-0 col-10 col-sm-8 col-md-6">
-      <h3 class="bg-dark text-light text-center border border-dark ">Sign In</h3>
+      <h3 class="bg-dark text-light text-center border border-dark">Sign In</h3>
       <b-form-group
         class="py-2 mx-2"
         id="input-group-1"

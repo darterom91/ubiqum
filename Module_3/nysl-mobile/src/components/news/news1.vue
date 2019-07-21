@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-white p-2">
     <b-card
     title="Relics begins training"
     img-src="https://cdn.ertheo.com/blog/wp-content/uploads/2016/10/soccer-drills-ertheo.jpg"

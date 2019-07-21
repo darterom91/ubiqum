@@ -1,5 +1,10 @@
 <template>
   <div class="sectionAB">
+    <b-container class=" col-12 bg-white">
+      <div class="col-12 col-sm-8 col-md-6 mx-auto p-2">
+        <b-img class="col-12" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRUKYIOoI4xDE_I5To6k6XZRFI0Ca3r0qNcyPyKXgPK-qTbIxj"></b-img>
+      </div>
+    </b-container>
     <b-card class="text-center p-2">
       <div class="bg-dark text-light rounded">
         <h3>Mission</h3>
