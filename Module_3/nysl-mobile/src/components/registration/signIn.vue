@@ -48,6 +48,8 @@
         <b-button class="col-4 text-center mx-1 my-2 py-2" type="submit" variant="primary">Submit</b-button>
         <b-button class="col-4 text-center mx-1 my-2 py-2" type="reset" variant="danger">Reset</b-button>
       </div>
+      <b-button block @click="signGmail()" class="text-left mt-2 bg-light text-dark"><img class="col-3 col-sm-2" src="@/assets/gmail.png" alt="gmail sign-Up"> Sign-up with Gmail
+      </b-button>
     </b-form>
   </div>
 </template>

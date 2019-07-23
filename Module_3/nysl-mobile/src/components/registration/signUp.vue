@@ -91,6 +91,13 @@ export default {
       this.email = '';
       this.pass = '';
     },
+
+    signGmail(){
+        const provider = new firebase.auth.GoogleAuthProvider()
+        firebase.auth().signInWithRedirect(provider).then((result) => {
+          this.user = result.user
+        }).catch(err => console.log(error))
+    }
   }
 }
 </script>

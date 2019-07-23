@@ -27,7 +27,7 @@
     </b-card>
     
     <b-card 
-      title="Card Title"
+      title="Chat"
       class="mt-2 text-center">
       <b-card v-for="(item, index) in messages" :key="index" class="text-left bg-secondary my-2">
         <b-card class="bg-dark text-light">
